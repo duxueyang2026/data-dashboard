@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "经营数据看板",
+    "currency": "CNY",
+    "updatedAt": "2026-09-20 18:30"
+  },
+  "daily": [
+    { "date": "2026-08-22", "revenue": 18920, "orders": 143, "visitors": 3290 },
+    { "date": "2026-08-23", "revenue": 21480, "orders": 157, "visitors": 3480 },
+    { "date": "2026-08-24", "revenue": 17640, "orders": 132, "visitors": 3180 },
+    { "date": "2026-08-25", "revenue": 23260, "orders": 171, "visitors": 3640 },
+    { "date": "2026-08-26", "revenue": 25710, "orders": 184, "visitors": 3910 },
+    { "date": "2026-08-27", "revenue": 24150, "orders": 176, "visitors": 3760 },
+    { "date": "2026-08-28", "revenue": 28690, "orders": 203, "visitors": 4210 },
+    { "date": "2026-08-29", "revenue": 27420, "orders": 196, "visitors": 4090 },
+    { "date": "2026-08-30", "revenue": 31280, "orders": 218, "visitors": 4480 },
+    { "date": "2026-08-31", "revenue": 29540, "orders": 209, "visitors": 4360 },
+    { "date": "2026-09-01", "revenue": 26840, "orders": 190, "visitors": 4020 },
+    { "date": "2026-09-02", "revenue": 30320, "orders": 215, "visitors": 4510 },
+    { "date": "2026-09-03", "revenue": 32960, "orders": 228, "visitors": 4690 },
+    { "date": "2026-09-04", "revenue": 34780, "orders": 239, "visitors": 4820 },
+    { "date": "2026-09-05", "revenue": 31640, "orders": 221, "visitors": 4570 },
+    { "date": "2026-09-06", "revenue": 36520, "orders": 248, "visitors": 5060 },
+    { "date": "2026-09-07", "revenue": 38940, "orders": 261, "visitors": 5280 },
+    { "date": "2026-09-08", "revenue": 35210, "orders": 242, "visitors": 4960 },
+    { "date": "2026-09-09", "revenue": 41380, "orders": 279, "visitors": 5510 },
+    { "date": "2026-09-10", "revenue": 39720, "orders": 270, "visitors": 5380 },
+    { "date": "2026-09-11", "revenue": 42560, "orders": 286, "visitors": 5680 },
+    { "date": "2026-09-12", "revenue": 46120, "orders": 305, "visitors": 5940 },
+    { "date": "2026-09-13", "revenue": 44890, "orders": 298, "visitors": 5820 },
+    { "date": "2026-09-14", "revenue": 49280, "orders": 322, "visitors": 6210 },
+    { "date": "2026-09-15", "revenue": 47560, "orders": 314, "visitors": 6090 },
+    { "date": "2026-09-16", "revenue": 51420, "orders": 337, "visitors": 6460 },
+    { "date": "2026-09-17", "revenue": 53880, "orders": 349, "visitors": 6720 },
+    { "date": "2026-09-18", "revenue": 49640, "orders": 326, "visitors": 6350 },
+    { "date": "2026-09-19", "revenue": 57260, "orders": 368, "visitors": 7080 },
+    { "date": "2026-09-20", "revenue": 59480, "orders": 381, "visitors": 7290 }
+  ],
+  "categories": [
+    { "name": "智能家电", "value": 316800 },
+    { "name": "清洁电器", "value": 258400 },
+    { "name": "厨房用品", "value": 196200 },
+    { "name": "家居收纳", "value": 143600 },
+    { "name": "个护健康", "value": 107900 }
+  ],
+  "records": [
+    { "id": "DD-20260920-001", "date": "2026-09-20", "category": "智能家电", "region": "华东", "amount": 3299, "status": "已完成" },
+    { "id": "DD-20260920-002", "date": "2026-09-20", "category": "清洁电器", "region": "华南", "amount": 1899, "status": "处理中" },
+    { "id": "DD-20260919-018", "date": "2026-09-19", "category": "厨房用品", "region": "华北", "amount": 688, "status": "已完成" },
+    { "id": "DD-20260919-012", "date": "2026-09-19", "category": "家居收纳", "region": "西南", "amount": 459, "status": "已退款" },
+    { "id": "DD-20260918-026", "date": "2026-09-18", "category": "个护健康", "region": "华中", "amount": 1299, "status": "已完成" },
+    { "id": "DD-20260918-009", "date": "2026-09-18", "category": "智能家电", "region": "东北", "amount": 4599, "status": "已完成" }
+  ]
+}

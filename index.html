@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="从 GitHub 仓库数据文件驱动的轻量网页经营看板"
+    />
+    <title>经营数据看板</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="主导航">
+        <a class="brand" href="./" aria-label="经营看板首页">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span class="brand-copy">
+            <strong>DATA DESK</strong>
+            <span>经营数据中心</span>
+          </span>
+        </a>
+
+        <nav class="nav-list">
+          <a class="nav-item active" href="#overview" aria-current="page">
+            <span class="nav-icon" aria-hidden="true">▦</span>
+            总览
+          </a>
+          <a class="nav-item" href="#records">
+            <span class="nav-icon" aria-hidden="true">≡</span>
+            明细
+          </a>
+        </nav>
+
+        <div class="source-panel">
+          <span class="source-label">数据源</span>
+          <strong>GitHub Repository</strong>
+          <a
+            href="https://github.com/duxueyang2026/data-dashboard"
+            target="_blank"
+            rel="noreferrer"
+          >
+            duxueyang2026/data-dashboard
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar" id="overview">
+          <div>
+            <p class="eyebrow">BUSINESS OVERVIEW</p>
+            <h1>经营数据看板</h1>
+            <p class="subtitle">关键指标、趋势与业务明细</p>
+          </div>
+          <div class="header-actions">
+            <div class="data-state" aria-live="polite">
+              <span class="state-dot" id="state-dot"></span>
+              <span id="data-state-text">正在读取数据</span>
+              <time id="updated-at"></time>
+            </div>
+            <button class="refresh-button" id="refresh-button" type="button">
+              <span aria-hidden="true">↻</span>
+              刷新数据
+            </button>
+          </div>
+        </header>
+
+        <section class="toolbar" aria-label="数据筛选">
+          <div class="period-control" role="group" aria-label="统计周期">
+            <button type="button" data-period="7">近 7 天</button>
+            <button type="button" data-period="30" class="active">近 30 天</button>
+            <button type="button" data-period="all">全部</button>
+          </div>
+          <p id="period-caption">统计区间加载中</p>
+        </section>
+
+        <div class="error-banner" id="error-banner" role="alert" hidden></div>
+
+        <section class="metric-grid" aria-label="核心经营指标">
+          <article class="metric-card">
+            <div class="metric-heading">
+              <span>销售额</span>
+              <span class="metric-tag green">GMV</span>
+            </div>
+            <strong class="metric-value" id="metric-revenue">--</strong>
+            <p class="metric-note" id="metric-revenue-note">所选周期累计</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric-heading">
+              <span>订单量</span>
+              <span class="metric-tag blue">ORDERS</span>
+            </div>
+            <strong class="metric-value" id="metric-orders">--</strong>
+            <p class="metric-note" id="metric-orders-note">所选周期累计</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric-heading">
+              <span>平均客单价</span>
+              <span class="metric-tag amber">AOV</span>
+            </div>
+            <strong class="metric-value" id="metric-aov">--</strong>
+            <p class="metric-note">销售额 / 订单量</p>
+          </article>
+          <article class="metric-card">
+            <div class="metric-heading">
+              <span>访问转化率</span>
+              <span class="metric-tag red">CVR</span>
+            </div>
+            <strong class="metric-value" id="metric-conversion">--</strong>
+            <p class="metric-note">订单量 / 访客数</p>
+          </article>
+        </section>
+
+        <section class="analytics-grid" aria-label="经营趋势分析">
+          <article class="panel trend-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">趋势</p>
+                <h2>每日销售额</h2>
+              </div>
+              <div class="trend-summary">
+                <span>日均</span>
+                <strong id="average-revenue">--</strong>
+              </div>
+            </div>
+            <div
+              class="chart-container"
+              id="trend-chart"
+              role="img"
+              aria-label="每日销售额折线图"
+            ></div>
+          </article>
+
+          <article class="panel category-panel">
+            <div class="panel-header">
+              <div>
+                <p class="panel-kicker">构成</p>
+                <h2>品类销售排名</h2>
+              </div>
+            </div>
+            <div class="category-list" id="category-list"></div>
+          </article>
+        </section>
+
+        <section class="table-section" id="records">
+          <div class="section-header">
+            <div>
+              <p class="panel-kicker">最新动态</p>
+              <h2>近期订单</h2>
+            </div>
+            <span id="record-count">0 条记录</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">订单号</th>
+                  <th scope="col">日期</th>
+                  <th scope="col">品类</th>
+                  <th scope="col">地区</th>
+                  <th scope="col">金额</th>
+                  <th scope="col">状态</th>
+                </tr>
+              </thead>
+              <tbody id="records-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer>
+          <span>数据文件：<code>data/dashboard.json</code></span>
+          <span id="data-as-of"></span>
+        </footer>
+      </main>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
