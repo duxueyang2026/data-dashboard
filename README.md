@@ -59,3 +59,8 @@ py -m http.server 8080
 Source 需要设置为 **GitHub Actions**。
 
 线上地址：<https://duxueyang2026.github.io/data-dashboard/>
+
+## 后续计划
+
+项目后续工作和安全改造顺序记录在 [`TODO.md`](TODO.md)。当前 GitHub Pages 仅用于演示数据；
+看板优化和数据校准完成后，再实施身份验证、访问白名单和受保护的数据接口，然后接入真实经营数据。
