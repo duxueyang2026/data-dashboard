@@ -1,54 +1,184 @@
 {
   "meta": {
-    "title": "经营数据看板",
+    "title": "销售数据总览",
     "currency": "CNY",
-    "updatedAt": "2026-09-20 18:30"
+    "updatedAt": "2026-09-21 12:35",
+    "demo": true,
+    "schemaVersion": 3,
+    "source": "GitHub Repository",
+    "exchangeRates": {
+      "base": "CNY",
+      "asOf": "2026-09-18",
+      "source": "European Central Bank",
+      "reference": "1 EUR = 7.6755 CNY; 1 EUR = 1.1460 USD",
+      "rates": {
+        "CNY": 1,
+        "EUR": 0.130284672,
+        "USD": 0.1493062341
+      }
+    }
+  },
+  "defaultTargets": {
+    "revenue": 1350000,
+    "adSpend": 186320,
+    "roi": 5.89,
+    "creatorCost": 92600
+  },
+  "comparisons": {
+    "revenue": 12.6,
+    "orders": 8.3,
+    "adSpend": 5.1,
+    "roi": 7.1,
+    "creatorCost": -3.4
   },
   "daily": [
-    { "date": "2026-08-22", "revenue": 18920, "orders": 143, "visitors": 3290 },
-    { "date": "2026-08-23", "revenue": 21480, "orders": 157, "visitors": 3480 },
-    { "date": "2026-08-24", "revenue": 17640, "orders": 132, "visitors": 3180 },
-    { "date": "2026-08-25", "revenue": 23260, "orders": 171, "visitors": 3640 },
-    { "date": "2026-08-26", "revenue": 25710, "orders": 184, "visitors": 3910 },
-    { "date": "2026-08-27", "revenue": 24150, "orders": 176, "visitors": 3760 },
-    { "date": "2026-08-28", "revenue": 28690, "orders": 203, "visitors": 4210 },
-    { "date": "2026-08-29", "revenue": 27420, "orders": 196, "visitors": 4090 },
-    { "date": "2026-08-30", "revenue": 31280, "orders": 218, "visitors": 4480 },
-    { "date": "2026-08-31", "revenue": 29540, "orders": 209, "visitors": 4360 },
-    { "date": "2026-09-01", "revenue": 26840, "orders": 190, "visitors": 4020 },
-    { "date": "2026-09-02", "revenue": 30320, "orders": 215, "visitors": 4510 },
-    { "date": "2026-09-03", "revenue": 32960, "orders": 228, "visitors": 4690 },
-    { "date": "2026-09-04", "revenue": 34780, "orders": 239, "visitors": 4820 },
-    { "date": "2026-09-05", "revenue": 31640, "orders": 221, "visitors": 4570 },
-    { "date": "2026-09-06", "revenue": 36520, "orders": 248, "visitors": 5060 },
-    { "date": "2026-09-07", "revenue": 38940, "orders": 261, "visitors": 5280 },
-    { "date": "2026-09-08", "revenue": 35210, "orders": 242, "visitors": 4960 },
-    { "date": "2026-09-09", "revenue": 41380, "orders": 279, "visitors": 5510 },
-    { "date": "2026-09-10", "revenue": 39720, "orders": 270, "visitors": 5380 },
-    { "date": "2026-09-11", "revenue": 42560, "orders": 286, "visitors": 5680 },
-    { "date": "2026-09-12", "revenue": 46120, "orders": 305, "visitors": 5940 },
-    { "date": "2026-09-13", "revenue": 44890, "orders": 298, "visitors": 5820 },
-    { "date": "2026-09-14", "revenue": 49280, "orders": 322, "visitors": 6210 },
-    { "date": "2026-09-15", "revenue": 47560, "orders": 314, "visitors": 6090 },
-    { "date": "2026-09-16", "revenue": 51420, "orders": 337, "visitors": 6460 },
-    { "date": "2026-09-17", "revenue": 53880, "orders": 349, "visitors": 6720 },
-    { "date": "2026-09-18", "revenue": 49640, "orders": 326, "visitors": 6350 },
-    { "date": "2026-09-19", "revenue": 57260, "orders": 368, "visitors": 7080 },
-    { "date": "2026-09-20", "revenue": 59480, "orders": 381, "visitors": 7290 }
+    { "date": "2026-08-22", "revenue": 21112, "orders": 159, "visitors": 3290 },
+    { "date": "2026-08-23", "revenue": 25460, "orders": 174, "visitors": 3480 },
+    { "date": "2026-08-24", "revenue": 21680, "orders": 149, "visitors": 3180 },
+    { "date": "2026-08-25", "revenue": 27235, "orders": 191, "visitors": 3640 },
+    { "date": "2026-08-26", "revenue": 29728, "orders": 216, "visitors": 3910 },
+    { "date": "2026-08-27", "revenue": 28223, "orders": 208, "visitors": 3760 },
+    { "date": "2026-08-28", "revenue": 32950, "orders": 237, "visitors": 4210 },
+    { "date": "2026-08-29", "revenue": 31733, "orders": 230, "visitors": 4090 },
+    { "date": "2026-08-30", "revenue": 35632, "orders": 251, "visitors": 4480 },
+    { "date": "2026-08-31", "revenue": 33947, "orders": 241, "visitors": 4360 },
+    { "date": "2026-09-01", "revenue": 31304, "orders": 222, "visitors": 4020 },
+    { "date": "2026-09-02", "revenue": 34824, "orders": 250, "visitors": 4510 },
+    { "date": "2026-09-03", "revenue": 37507, "orders": 263, "visitors": 4690 },
+    { "date": "2026-09-04", "revenue": 39372, "orders": 276, "visitors": 4820 },
+    { "date": "2026-09-05", "revenue": 36490, "orders": 257, "visitors": 4570 },
+    { "date": "2026-09-06", "revenue": 41406, "orders": 286, "visitors": 5060 },
+    { "date": "2026-09-07", "revenue": 43870, "orders": 289, "visitors": 5280 },
+    { "date": "2026-09-08", "revenue": 40200, "orders": 269, "visitors": 4960 },
+    { "date": "2026-09-09", "revenue": 46303, "orders": 309, "visitors": 5510 },
+    { "date": "2026-09-10", "revenue": 44697, "orders": 300, "visitors": 5380 },
+    { "date": "2026-09-11", "revenue": 47579, "orders": 317, "visitors": 5680 },
+    { "date": "2026-09-12", "revenue": 51180, "orders": 338, "visitors": 5940 },
+    { "date": "2026-09-13", "revenue": 50003, "orders": 332, "visitors": 5820 },
+    { "date": "2026-09-14", "revenue": 54480, "orders": 359, "visitors": 6210 },
+    { "date": "2026-09-15", "revenue": 52865, "orders": 351, "visitors": 6090 },
+    { "date": "2026-09-16", "revenue": 56764, "orders": 376, "visitors": 6460 },
+    { "date": "2026-09-17", "revenue": 59267, "orders": 390, "visitors": 6720 },
+    { "date": "2026-09-18", "revenue": 55089, "orders": 366, "visitors": 6350 },
+    { "date": "2026-09-19", "revenue": 62838, "orders": 411, "visitors": 7080 },
+    { "date": "2026-09-20", "revenue": 64752, "orders": 451, "visitors": 7290 }
   ],
-  "categories": [
-    { "name": "智能家电", "value": 316800 },
-    { "name": "清洁电器", "value": 258400 },
-    { "name": "厨房用品", "value": 196200 },
-    { "name": "家居收纳", "value": 143600 },
-    { "name": "个护健康", "value": 107900 }
+  "markets": [
+    { "country": "US", "countryName": "美国", "platform": "amazon", "revenue": 240000, "orders": 1600, "adSpend": 48000, "creatorCost": 10000, "change": 8.4 },
+    { "country": "US", "countryName": "美国", "platform": "tiktok", "revenue": 210000, "orders": 1500, "adSpend": 30000, "creatorCost": 18000, "change": 16.8 },
+    { "country": "US", "countryName": "美国", "platform": "dtc", "revenue": 62360, "orders": 380, "adSpend": 10000, "creatorCost": 8000, "change": 11.2 },
+    { "country": "UK", "countryName": "英国", "platform": "amazon", "revenue": 100000, "orders": 700, "adSpend": 19000, "creatorCost": 5500, "change": 7.1 },
+    { "country": "UK", "countryName": "英国", "platform": "tiktok", "revenue": 100000, "orders": 650, "adSpend": 13000, "creatorCost": 9000, "change": 15.6 },
+    { "country": "UK", "countryName": "英国", "platform": "dtc", "revenue": 31480, "orders": 200, "adSpend": 4200, "creatorCost": 4000, "change": 5.3 },
+    { "country": "DE", "countryName": "德国", "platform": "amazon", "revenue": 90000, "orders": 600, "adSpend": 16000, "creatorCost": 5000, "change": -6.8 },
+    { "country": "DE", "countryName": "德国", "platform": "tiktok", "revenue": 40000, "orders": 280, "adSpend": 7000, "creatorCost": 5000, "change": 6.3 },
+    { "country": "DE", "countryName": "德国", "platform": "dtc", "revenue": 17620, "orders": 120, "adSpend": 3000, "creatorCost": 3000, "change": 2.8 },
+    { "country": "FR", "countryName": "法国", "platform": "amazon", "revenue": 40000, "orders": 300, "adSpend": 9000, "creatorCost": 4000, "change": 3.2 },
+    { "country": "FR", "countryName": "法国", "platform": "tiktok", "revenue": 50000, "orders": 350, "adSpend": 8500, "creatorCost": 6000, "change": 9.8 },
+    { "country": "FR", "countryName": "法国", "platform": "dtc", "revenue": 26930, "orders": 170, "adSpend": 3700, "creatorCost": 4300, "change": 8.9 },
+    { "country": "IT", "countryName": "意大利", "platform": "amazon", "revenue": 28000, "orders": 190, "adSpend": 5600, "creatorCost": 2800, "change": 5.6 },
+    { "country": "IT", "countryName": "意大利", "platform": "tiktok", "revenue": 34000, "orders": 240, "adSpend": 5800, "creatorCost": 4200, "change": 10.4 },
+    { "country": "IT", "countryName": "意大利", "platform": "dtc", "revenue": 18000, "orders": 130, "adSpend": 2800, "creatorCost": 3300, "change": 7.4 },
+    { "country": "ES", "countryName": "西班牙", "platform": "amazon", "revenue": 33210, "orders": 220, "adSpend": 6600, "creatorCost": 3800, "change": 4.8 },
+    { "country": "ES", "countryName": "西班牙", "platform": "tiktok", "revenue": 28760, "orders": 200, "adSpend": 5300, "creatorCost": 3200, "change": 13.4 },
+    { "country": "ES", "countryName": "西班牙", "platform": "dtc", "revenue": 28130, "orders": 198, "adSpend": 3020, "creatorCost": 3800, "change": 12.5 },
+    { "country": "PL", "countryName": "波兰", "platform": "amazon", "revenue": 22000, "orders": 160, "adSpend": 4200, "creatorCost": 2200, "change": 6.2 },
+    { "country": "PL", "countryName": "波兰", "platform": "tiktok", "revenue": 24000, "orders": 180, "adSpend": 4500, "creatorCost": 2800, "change": 11.1 },
+    { "country": "PL", "countryName": "波兰", "platform": "dtc", "revenue": 14000, "orders": 100, "adSpend": 2200, "creatorCost": 2000, "change": 8.6 }
   ],
-  "records": [
-    { "id": "DD-20260920-001", "date": "2026-09-20", "category": "智能家电", "region": "华东", "amount": 3299, "status": "已完成" },
-    { "id": "DD-20260920-002", "date": "2026-09-20", "category": "清洁电器", "region": "华南", "amount": 1899, "status": "处理中" },
-    { "id": "DD-20260919-018", "date": "2026-09-19", "category": "厨房用品", "region": "华北", "amount": 688, "status": "已完成" },
-    { "id": "DD-20260919-012", "date": "2026-09-19", "category": "家居收纳", "region": "西南", "amount": 459, "status": "已退款" },
-    { "id": "DD-20260918-026", "date": "2026-09-18", "category": "个护健康", "region": "华中", "amount": 1299, "status": "已完成" },
-    { "id": "DD-20260918-009", "date": "2026-09-18", "category": "智能家电", "region": "东北", "amount": 4599, "status": "已完成" }
+  "platformTrends": {
+    "tiktok": [49, 52, 55, 50, 48, 51, 50, 53, 57, 54, 60, 65, 63, 68, 69, 65, 72, 68, 74, 77, 73, 80, 76, 82, 79, 84, 87, 85, 92, 96],
+    "amazon": [58, 61, 59, 64, 66, 63, 67, 65, 70, 69, 66, 62, 68, 64, 72, 75, 71, 78, 74, 80, 77, 83, 79, 85, 81, 88, 84, 91, 89, 95],
+    "dtc": [32, 35, 34, 37, 39, 36, 33, 38, 42, 39, 40, 39, 38, 42, 41, 44, 43, 47, 46, 52, 51, 49, 48, 53, 50, 55, 52, 57, 56, 60]
+  },
+  "countryTrends": {
+    "US": [45, 49, 47, 53, 51, 56, 54, 59, 57, 62, 60, 65],
+    "UK": [36, 39, 37, 42, 40, 44, 43, 47, 45, 50, 48, 53],
+    "DE": [49, 47, 44, 45, 41, 39, 40, 37, 35, 33, 32, 29],
+    "FR": [31, 34, 33, 36, 35, 39, 38, 42, 40, 45, 43, 47],
+    "IT": [29, 31, 30, 34, 33, 37, 36, 40, 39, 43, 42, 46],
+    "ES": [26, 28, 27, 31, 29, 34, 32, 37, 35, 40, 38, 43],
+    "PL": [22, 24, 23, 27, 26, 30, 29, 33, 31, 35, 34, 39]
+  },
+  "alerts": [
+    {
+      "severity": "high",
+      "label": "高",
+      "title": "德国 Amazon ROI 低于目标",
+      "owner": "运营经理",
+      "deadline": "09-23",
+      "action": "复核广告关键词与出价，暂停连续亏损广告组。"
+    },
+    {
+      "severity": "medium",
+      "label": "中",
+      "title": "TikTok Shop 美国库存仅可售 9 天",
+      "owner": "供应链",
+      "deadline": "09-24",
+      "action": "确认补货批次，优先保障高转化型号。"
+    },
+    {
+      "severity": "medium",
+      "label": "中",
+      "title": "法国独立站达人费用环比上升 26%",
+      "owner": "市场经理",
+      "deadline": "09-25",
+      "action": "复盘达人订单贡献，调整固定费与佣金结构。"
+    }
+  ],
+  "tips": [
+    {
+      "title": "提高美国 Amazon 广告投放效率",
+      "action": "将预算从低转化宽泛词转向高转化精准词，目标提升 ROI 8% 至 12%。"
+    },
+    {
+      "title": "加大英国 TikTok Shop 达人合作",
+      "action": "当前转化高于均值，建议追加 20% 合作预算并优先复投头部素材。"
+    },
+    {
+      "title": "优化法国独立站商品结构",
+      "action": "高毛利品表现较好，建议在该市场增加关联销售和组合装 SKU。"
+    }
+  ],
+  "salesDetails": [
+    { "date": "2026-09-20", "country": "美国", "platform": "Amazon", "category": "清洁电器", "model": "VC-X1", "revenue": 28460, "orders": 174, "roi": 6.4 },
+    { "date": "2026-09-20", "country": "美国", "platform": "TikTok Shop", "category": "个护健康", "model": "HC-PRO", "revenue": 19880, "orders": 146, "roi": 7.1 },
+    { "date": "2026-09-20", "country": "英国", "platform": "TikTok Shop", "category": "厨房用品", "model": "KT-M2", "revenue": 11140, "orders": 78, "roi": 6.8 },
+    { "date": "2026-09-19", "country": "德国", "platform": "Amazon", "category": "智能家电", "model": "SM-A8", "revenue": 12620, "orders": 69, "roi": 4.5 },
+    { "date": "2026-09-19", "country": "法国", "platform": "独立站", "category": "家居收纳", "model": "HS-S3", "revenue": 8740, "orders": 52, "roi": 4.3 },
+    { "date": "2026-09-19", "country": "西班牙", "platform": "Amazon", "category": "清洁电器", "model": "VC-L2", "revenue": 6480, "orders": 41, "roi": 5.2 },
+    { "date": "2026-09-18", "country": "英国", "platform": "Amazon", "category": "智能家电", "model": "SM-A8", "revenue": 15320, "orders": 91, "roi": 5.9 },
+    { "date": "2026-09-18", "country": "法国", "platform": "TikTok Shop", "category": "个护健康", "model": "HC-LITE", "revenue": 9880, "orders": 74, "roi": 6.1 }
+  ],
+  "competitors": [
+    { "brand": "Brand Nova", "category": "清洁电器", "model": "N-One", "country": "美国", "platform": "Amazon", "sales": 18600, "rank": 3, "change": 2 },
+    { "brand": "HausLab", "category": "智能家电", "model": "H8", "country": "德国", "platform": "Amazon", "sales": 12400, "rank": 5, "change": -1 },
+    { "brand": "Mori Home", "category": "家居收纳", "model": "Box Pro", "country": "英国", "platform": "TikTok Shop", "sales": 11800, "rank": 2, "change": 4 },
+    { "brand": "Kivo", "category": "厨房用品", "model": "Cook Mini", "country": "法国", "platform": "独立站", "sales": 9200, "rank": 7, "change": 1 },
+    { "brand": "PureDay", "category": "个护健康", "model": "P3", "country": "西班牙", "platform": "Amazon", "sales": 7900, "rank": 9, "change": -2 },
+    { "brand": "Brand Nova", "category": "清洁电器", "model": "N-Lite", "country": "英国", "platform": "TikTok Shop", "sales": 15400, "rank": 4, "change": 3 }
+  ],
+  "materials": [
+    { "name": "VC-X1 开箱测评 09A", "platform": "TikTok Shop", "type": "短视频", "publishedAt": "2026-09-18", "views": 486000, "ctr": 3.9, "revenue": 82400, "status": "增长" },
+    { "name": "HC-PRO 达人口播 12B", "platform": "TikTok Shop", "type": "达人视频", "publishedAt": "2026-09-17", "views": 328000, "ctr": 4.4, "revenue": 71600, "status": "增长" },
+    { "name": "SM-A8 使用场景图组", "platform": "Amazon", "type": "图片", "publishedAt": "2026-09-16", "views": 174000, "ctr": 2.8, "revenue": 56900, "status": "稳定" },
+    { "name": "KT-M2 三步教程", "platform": "独立站", "type": "短视频", "publishedAt": "2026-09-15", "views": 96000, "ctr": 3.2, "revenue": 28400, "status": "稳定" },
+    { "name": "VC-L2 对比评测", "platform": "Amazon", "type": "A+ 页面", "publishedAt": "2026-09-13", "views": 126000, "ctr": 2.1, "revenue": 31100, "status": "待优化" },
+    { "name": "HS-S3 收纳改造", "platform": "独立站", "type": "图文", "publishedAt": "2026-09-11", "views": 78000, "ctr": 1.9, "revenue": 16700, "status": "待优化" }
+  ],
+  "documents": [
+    { "name": "2026-09 欧洲渠道经营周报.xlsx", "type": "Excel", "owner": "运营部", "updatedAt": "2026-09-20 16:20" },
+    { "name": "Q4 新品上市节奏.pdf", "type": "PDF", "owner": "产品部", "updatedAt": "2026-09-19 11:40" },
+    { "name": "TikTok 达人合作名单.csv", "type": "CSV", "owner": "市场部", "updatedAt": "2026-09-18 18:05" },
+    { "name": "海外仓补货计划.xlsx", "type": "Excel", "owner": "供应链", "updatedAt": "2026-09-18 09:30" }
+  ],
+  "inventory": [
+    { "sku": "VC-X1-US", "model": "VC-X1", "country": "美国", "warehouse": "美西仓", "available": 486, "days": 9, "status": "需补货", "suggested": 800 },
+    { "sku": "HC-PRO-US", "model": "HC-PRO", "country": "美国", "warehouse": "美东仓", "available": 920, "days": 21, "status": "正常", "suggested": 0 },
+    { "sku": "SM-A8-DE", "model": "SM-A8", "country": "德国", "warehouse": "德国仓", "available": 312, "days": 13, "status": "关注", "suggested": 420 },
+    { "sku": "KT-M2-UK", "model": "KT-M2", "country": "英国", "warehouse": "英国仓", "available": 678, "days": 26, "status": "正常", "suggested": 0 },
+    { "sku": "HS-S3-FR", "model": "HS-S3", "country": "法国", "warehouse": "法国仓", "available": 188, "days": 8, "status": "需补货", "suggested": 360 },
+    { "sku": "VC-L2-ES", "model": "VC-L2", "country": "西班牙", "warehouse": "西班牙仓", "available": 440, "days": 18, "status": "正常", "suggested": 0 },
+    { "sku": "HC-LITE-UK", "model": "HC-LITE", "country": "英国", "warehouse": "英国仓", "available": 264, "days": 12, "status": "关注", "suggested": 300 }
   ]
 }

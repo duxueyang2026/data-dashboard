@@ -1,57 +1,61 @@
-# GitHub 数据看板
+# GitHub 经营数据看板
 
-这是一个不依赖构建工具的静态网页看板。页面从仓库内的
-`data/dashboard.json` 读取数据，并通过 GitHub Pages 自动部署。
+这是一个不依赖构建工具的静态经营看板。页面从仓库内的
+`data/dashboard.json` 读取数据，并通过 GitHub Pages 发布。
+
+## 已有模块
+
+- 经营总览：经营目标、核心指标、平台对比、国家贡献、销售趋势、需要关注和经营提示
+- 国家筛选：美国、英国、德国、法国、意大利、西班牙、波兰，以及欧盟（EU）聚合视图
+- 时间筛选：本月、近 7 天、近 30 天、全部数据，以及可保留在网址中的自定义起止日期
+- 币种显示：人民币 CNY（默认）、欧元 EUR、美元 USD；所有原始金额与目标仍以人民币为数据基准
+- 销售明细：日期、国家、平台、品类、型号、销售额、订单量和 ROI
+- 竞品洞察：品牌、品类、型号、国家、平台、估算销量、排名和排名变化
+- 素材表现：素材、平台、发布日期、播放或曝光、点击率和贡献销售额
+- 资料中心：仓库文件清单以及本地文件预览
+- 库存管理：型号、仓库、可用库存、在途、日均销量、可售天数和补货建议
+
+页面中的“演示数据”标记表示当前内容尚未接入真实业务数据。资料中心选择的本地文件
+不会自动上传到 GitHub。
 
 ## 本地预览
 
-直接打开 `index.html` 时，浏览器可能会阻止读取 JSON。请在项目目录启动任意静态服务器，例如：
+直接打开 `index.html` 时，浏览器可能会阻止读取 JSON。请在项目目录启动静态服务器，
+然后访问对应地址。例如：
 
 ```powershell
 py -m http.server 8080
 ```
 
-然后打开 `http://localhost:8080`。
+打开 `http://127.0.0.1:8080/`。
 
-## 数据格式
+## 数据入口
 
-编辑 `data/dashboard.json`，保持以下结构：
+所有看板数据都位于 `data/dashboard.json`：
 
-```json
-{
-  "meta": {
-    "updatedAt": "2026-09-20 18:30"
-  },
-  "daily": [
-    {
-      "date": "2026-09-20",
-      "revenue": 59480,
-      "orders": 381,
-      "visitors": 7290
-    }
-  ],
-  "categories": [
-    { "name": "智能家电", "value": 316800 }
-  ],
-  "records": [
-    {
-      "id": "DD-20260920-001",
-      "date": "2026-09-20",
-      "category": "智能家电",
-      "region": "华东",
-      "amount": 3299,
-      "status": "已完成"
-    }
-  ]
-}
-```
+- `meta`：数据版本、更新时间和演示状态
+- `meta.exchangeRates`：以 CNY 为基准的展示汇率、汇率日期和来源
+- `defaultTargets`：销售、投放、ROI 和达人费用的默认目标
+- `daily`：每日销售额与订单量
+- `markets`：国家和平台维度的经营汇总
+- EU 聚合：筛选“欧盟（EU）”时，动态合计德国、法国、意大利、西班牙、波兰五个成员国，数据源中不重复写入 EU 行
+- `platformTrends`、`countryTrends`：轻量趋势序列
+- `alerts`、`tips`：需要关注与经营提示
+- `salesDetails`、`competitors`、`materials`、`documents`、`inventory`：五个明细模块
 
-必填字段是 `daily` 和 `categories`。`records` 可以为空数组。金额按人民币展示。
+网页上手动设置的目标保存在当前浏览器的 `localStorage` 中，不会改写仓库文件。后续如需
+多人共用目标，应将目标写入 JSON、数据库或后端接口。
+
+自定义时间通过 `period=custom&start=YYYY-MM-DD&end=YYYY-MM-DD` 写入网址；日期会被限制
+在数据文件实际覆盖的时间范围内。
+
+币种通过 `currency=EUR` 或 `currency=USD` 写入网址；人民币是默认值，因此使用 CNY 时不写
+币种参数。目标设置会按当前币种显示和录入，保存时自动换算回人民币基准，避免反复切换
+造成累计误差。当前演示汇率采用欧洲央行 2026-09-18 参考汇率，仅用于经营分析展示。
 
 ## 发布
 
-推送到 `main` 分支后，`.github/workflows/deploy-pages.yml` 会自动部署页面。
-首次使用时，在仓库的 **Settings > Pages > Build and deployment** 中将 **Source** 设置为
-**GitHub Actions**。
+推送到 `main` 分支后，`.github/workflows/deploy-pages.yml` 会自动部署。GitHub Pages 的
+Source 需要设置为 **GitHub Actions**。
 
-发布地址：`https://duxueyang2026.github.io/data-dashboard/`
+线上地址：<https://duxueyang2026.github.io/data-dashboard/>
