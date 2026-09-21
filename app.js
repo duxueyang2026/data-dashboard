@@ -98,6 +98,7 @@ const elements = {
   filterSummary: document.querySelector("#filter-summary"),
   goalPeriod: document.querySelector("#goal-period"),
   goalGrid: document.querySelector("#goal-grid"),
+  metricPeriod: document.querySelector("#metric-period"),
   metricGrid: document.querySelector("#metric-grid"),
   platformPeriod: document.querySelector("#platform-period"),
   platformGrid: document.querySelector("#platform-grid"),
@@ -559,6 +560,7 @@ function renderFilterState() {
   const currencyText = getCurrencyLabel();
 
   elements.platformPeriod.textContent = periodText;
+  elements.metricPeriod.textContent = periodText;
 
   if (!daily.length) {
     elements.filterSummary.textContent = "所选区间暂无数据";
@@ -671,6 +673,15 @@ function renderMetrics() {
   const comparisons = state.data.comparisons;
   const cards = [
     {
+      label: "销售额",
+      icon: "fa-solid fa-sack-dollar",
+      value: formatMoney(metrics.revenue),
+      change: comparisons.revenue,
+      note: "较上期",
+      inverse: false,
+      featured: true,
+    },
+    {
       label: "订单量",
       icon: "fa-solid fa-cart-shopping",
       value: integer.format(metrics.orders),
@@ -709,7 +720,7 @@ function renderMetrics() {
       const favorable = card.inverse ? card.change <= 0 : card.change >= 0;
       const direction = card.change >= 0 ? "上升" : "下降";
       return `
-        <article class="metric-card">
+        <article class="metric-card${card.featured ? " metric-card-featured" : ""}">
           <div class="metric-heading">
             <span>${card.label}</span>
             <i class="${card.icon}" aria-hidden="true"></i>

@@ -548,6 +548,11 @@ h3 {
   color: var(--green);
 }
 
+.section-icon.blue {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
 .section-icon.red {
   background: var(--red-soft);
   color: var(--red);
@@ -637,10 +642,28 @@ h3 {
   background: var(--red);
 }
 
+.sales-summary-section {
+  margin-top: 18px;
+}
+
+.sales-summary-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 2px;
+}
+
+.sales-summary-heading p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
 .metric-grid {
-  margin-top: 10px;
+  margin-top: 9px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -648,6 +671,11 @@ h3 {
   min-width: 0;
   min-height: 108px;
   padding: 13px 15px;
+}
+
+.metric-card-featured {
+  border-color: #b8d3c4;
+  box-shadow: inset 3px 0 0 var(--green), var(--shadow);
 }
 
 .metric-heading {

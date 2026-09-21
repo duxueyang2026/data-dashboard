@@ -149,7 +149,7 @@
                 </span>
                 <div>
                   <div class="heading-with-badge">
-                    <h2 id="goal-title">本月经营目标</h2>
+                    <h2 id="goal-title">经营目标与达成</h2>
                     <span class="demo-badge">演示数据</span>
                   </div>
                   <p id="goal-period">目标周期加载中</p>
@@ -163,7 +163,21 @@
             <div class="goal-grid" id="goal-grid"></div>
           </section>
 
-          <section class="metric-grid" id="metric-grid" aria-label="核心经营指标"></section>
+          <section class="sales-summary-section" aria-labelledby="sales-summary-title">
+            <div class="sales-summary-heading">
+              <div class="section-title-row">
+                <span class="section-icon blue" aria-hidden="true">
+                  <i class="fa-solid fa-chart-column"></i>
+                </span>
+                <div>
+                  <h2 id="sales-summary-title">整体销售数据</h2>
+                  <p>当前筛选范围内的销售规模、投入与效率</p>
+                </div>
+              </div>
+              <span class="panel-period" id="metric-period">本月</span>
+            </div>
+            <div class="metric-grid" id="metric-grid" aria-label="整体销售数据指标"></div>
+          </section>
 
           <div class="overview-layout">
             <div class="overview-main-column">
