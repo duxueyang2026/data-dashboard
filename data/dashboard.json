@@ -2,10 +2,10 @@
   "meta": {
     "title": "销售数据总览",
     "currency": "CNY",
-    "updatedAt": "2026-09-21 12:35",
+    "updatedAt": "2026-10-09 03:30",
     "demo": true,
     "schemaVersion": 3,
-    "source": "GitHub Repository",
+    "source": "GitHub Repository + Feishu Sheet",
     "exchangeRates": {
       "base": "CNY",
       "asOf": "2026-09-18",
@@ -16,6 +16,16 @@
         "EUR": 0.130284672,
         "USD": 0.1493062341
       }
+    },
+    "competitorSync": {
+      "source": "Feishu Sheet",
+      "sourceUrl": "https://e00r0t9l67e.feishu.cn/wiki/VXHgw0UkuiMUlCkGr1Scpcy7n9e?table=tblOKZGgX9nArXDH&view=vewE4buZj8",
+      "wikiToken": "VXHgw0UkuiMUlCkGr1Scpcy7n9e",
+      "spreadsheetToken": "YxKrsOQUEhhW5ZtLsjxc39pVnxb",
+      "sheetId": "ebd5eb",
+      "spreadsheetTitle": "公用数据表-excle",
+      "syncedAt": "2026-10-09T03:30:45+08:00",
+      "recordCount": 239
     }
   },
   "defaultTargets": {
@@ -32,73 +42,596 @@
     "creatorCost": -3.4
   },
   "daily": [
-    { "date": "2026-08-22", "revenue": 21112, "orders": 159, "visitors": 3290 },
-    { "date": "2026-08-23", "revenue": 25460, "orders": 174, "visitors": 3480 },
-    { "date": "2026-08-24", "revenue": 21680, "orders": 149, "visitors": 3180 },
-    { "date": "2026-08-25", "revenue": 27235, "orders": 191, "visitors": 3640 },
-    { "date": "2026-08-26", "revenue": 29728, "orders": 216, "visitors": 3910 },
-    { "date": "2026-08-27", "revenue": 28223, "orders": 208, "visitors": 3760 },
-    { "date": "2026-08-28", "revenue": 32950, "orders": 237, "visitors": 4210 },
-    { "date": "2026-08-29", "revenue": 31733, "orders": 230, "visitors": 4090 },
-    { "date": "2026-08-30", "revenue": 35632, "orders": 251, "visitors": 4480 },
-    { "date": "2026-08-31", "revenue": 33947, "orders": 241, "visitors": 4360 },
-    { "date": "2026-09-01", "revenue": 31304, "orders": 222, "visitors": 4020 },
-    { "date": "2026-09-02", "revenue": 34824, "orders": 250, "visitors": 4510 },
-    { "date": "2026-09-03", "revenue": 37507, "orders": 263, "visitors": 4690 },
-    { "date": "2026-09-04", "revenue": 39372, "orders": 276, "visitors": 4820 },
-    { "date": "2026-09-05", "revenue": 36490, "orders": 257, "visitors": 4570 },
-    { "date": "2026-09-06", "revenue": 41406, "orders": 286, "visitors": 5060 },
-    { "date": "2026-09-07", "revenue": 43870, "orders": 289, "visitors": 5280 },
-    { "date": "2026-09-08", "revenue": 40200, "orders": 269, "visitors": 4960 },
-    { "date": "2026-09-09", "revenue": 46303, "orders": 309, "visitors": 5510 },
-    { "date": "2026-09-10", "revenue": 44697, "orders": 300, "visitors": 5380 },
-    { "date": "2026-09-11", "revenue": 47579, "orders": 317, "visitors": 5680 },
-    { "date": "2026-09-12", "revenue": 51180, "orders": 338, "visitors": 5940 },
-    { "date": "2026-09-13", "revenue": 50003, "orders": 332, "visitors": 5820 },
-    { "date": "2026-09-14", "revenue": 54480, "orders": 359, "visitors": 6210 },
-    { "date": "2026-09-15", "revenue": 52865, "orders": 351, "visitors": 6090 },
-    { "date": "2026-09-16", "revenue": 56764, "orders": 376, "visitors": 6460 },
-    { "date": "2026-09-17", "revenue": 59267, "orders": 390, "visitors": 6720 },
-    { "date": "2026-09-18", "revenue": 55089, "orders": 366, "visitors": 6350 },
-    { "date": "2026-09-19", "revenue": 62838, "orders": 411, "visitors": 7080 },
-    { "date": "2026-09-20", "revenue": 64752, "orders": 451, "visitors": 7290 }
+    {
+      "date": "2026-08-22",
+      "revenue": 21112,
+      "orders": 159,
+      "visitors": 3290
+    },
+    {
+      "date": "2026-08-23",
+      "revenue": 25460,
+      "orders": 174,
+      "visitors": 3480
+    },
+    {
+      "date": "2026-08-24",
+      "revenue": 21680,
+      "orders": 149,
+      "visitors": 3180
+    },
+    {
+      "date": "2026-08-25",
+      "revenue": 27235,
+      "orders": 191,
+      "visitors": 3640
+    },
+    {
+      "date": "2026-08-26",
+      "revenue": 29728,
+      "orders": 216,
+      "visitors": 3910
+    },
+    {
+      "date": "2026-08-27",
+      "revenue": 28223,
+      "orders": 208,
+      "visitors": 3760
+    },
+    {
+      "date": "2026-08-28",
+      "revenue": 32950,
+      "orders": 237,
+      "visitors": 4210
+    },
+    {
+      "date": "2026-08-29",
+      "revenue": 31733,
+      "orders": 230,
+      "visitors": 4090
+    },
+    {
+      "date": "2026-08-30",
+      "revenue": 35632,
+      "orders": 251,
+      "visitors": 4480
+    },
+    {
+      "date": "2026-08-31",
+      "revenue": 33947,
+      "orders": 241,
+      "visitors": 4360
+    },
+    {
+      "date": "2026-09-01",
+      "revenue": 31304,
+      "orders": 222,
+      "visitors": 4020
+    },
+    {
+      "date": "2026-09-02",
+      "revenue": 34824,
+      "orders": 250,
+      "visitors": 4510
+    },
+    {
+      "date": "2026-09-03",
+      "revenue": 37507,
+      "orders": 263,
+      "visitors": 4690
+    },
+    {
+      "date": "2026-09-04",
+      "revenue": 39372,
+      "orders": 276,
+      "visitors": 4820
+    },
+    {
+      "date": "2026-09-05",
+      "revenue": 36490,
+      "orders": 257,
+      "visitors": 4570
+    },
+    {
+      "date": "2026-09-06",
+      "revenue": 41406,
+      "orders": 286,
+      "visitors": 5060
+    },
+    {
+      "date": "2026-09-07",
+      "revenue": 43870,
+      "orders": 289,
+      "visitors": 5280
+    },
+    {
+      "date": "2026-09-08",
+      "revenue": 40200,
+      "orders": 269,
+      "visitors": 4960
+    },
+    {
+      "date": "2026-09-09",
+      "revenue": 46303,
+      "orders": 309,
+      "visitors": 5510
+    },
+    {
+      "date": "2026-09-10",
+      "revenue": 44697,
+      "orders": 300,
+      "visitors": 5380
+    },
+    {
+      "date": "2026-09-11",
+      "revenue": 47579,
+      "orders": 317,
+      "visitors": 5680
+    },
+    {
+      "date": "2026-09-12",
+      "revenue": 51180,
+      "orders": 338,
+      "visitors": 5940
+    },
+    {
+      "date": "2026-09-13",
+      "revenue": 50003,
+      "orders": 332,
+      "visitors": 5820
+    },
+    {
+      "date": "2026-09-14",
+      "revenue": 54480,
+      "orders": 359,
+      "visitors": 6210
+    },
+    {
+      "date": "2026-09-15",
+      "revenue": 52865,
+      "orders": 351,
+      "visitors": 6090
+    },
+    {
+      "date": "2026-09-16",
+      "revenue": 56764,
+      "orders": 376,
+      "visitors": 6460
+    },
+    {
+      "date": "2026-09-17",
+      "revenue": 59267,
+      "orders": 390,
+      "visitors": 6720
+    },
+    {
+      "date": "2026-09-18",
+      "revenue": 55089,
+      "orders": 366,
+      "visitors": 6350
+    },
+    {
+      "date": "2026-09-19",
+      "revenue": 62838,
+      "orders": 411,
+      "visitors": 7080
+    },
+    {
+      "date": "2026-09-20",
+      "revenue": 64752,
+      "orders": 451,
+      "visitors": 7290
+    }
   ],
   "markets": [
-    { "country": "US", "countryName": "美国", "platform": "amazon", "revenue": 240000, "orders": 1600, "adSpend": 48000, "creatorCost": 10000, "change": 8.4 },
-    { "country": "US", "countryName": "美国", "platform": "tiktok", "revenue": 210000, "orders": 1500, "adSpend": 30000, "creatorCost": 18000, "change": 16.8 },
-    { "country": "US", "countryName": "美国", "platform": "dtc", "revenue": 62360, "orders": 380, "adSpend": 10000, "creatorCost": 8000, "change": 11.2 },
-    { "country": "UK", "countryName": "英国", "platform": "amazon", "revenue": 100000, "orders": 700, "adSpend": 19000, "creatorCost": 5500, "change": 7.1 },
-    { "country": "UK", "countryName": "英国", "platform": "tiktok", "revenue": 100000, "orders": 650, "adSpend": 13000, "creatorCost": 9000, "change": 15.6 },
-    { "country": "UK", "countryName": "英国", "platform": "dtc", "revenue": 31480, "orders": 200, "adSpend": 4200, "creatorCost": 4000, "change": 5.3 },
-    { "country": "DE", "countryName": "德国", "platform": "amazon", "revenue": 90000, "orders": 600, "adSpend": 16000, "creatorCost": 5000, "change": -6.8 },
-    { "country": "DE", "countryName": "德国", "platform": "tiktok", "revenue": 40000, "orders": 280, "adSpend": 7000, "creatorCost": 5000, "change": 6.3 },
-    { "country": "DE", "countryName": "德国", "platform": "dtc", "revenue": 17620, "orders": 120, "adSpend": 3000, "creatorCost": 3000, "change": 2.8 },
-    { "country": "FR", "countryName": "法国", "platform": "amazon", "revenue": 40000, "orders": 300, "adSpend": 9000, "creatorCost": 4000, "change": 3.2 },
-    { "country": "FR", "countryName": "法国", "platform": "tiktok", "revenue": 50000, "orders": 350, "adSpend": 8500, "creatorCost": 6000, "change": 9.8 },
-    { "country": "FR", "countryName": "法国", "platform": "dtc", "revenue": 26930, "orders": 170, "adSpend": 3700, "creatorCost": 4300, "change": 8.9 },
-    { "country": "IT", "countryName": "意大利", "platform": "amazon", "revenue": 28000, "orders": 190, "adSpend": 5600, "creatorCost": 2800, "change": 5.6 },
-    { "country": "IT", "countryName": "意大利", "platform": "tiktok", "revenue": 34000, "orders": 240, "adSpend": 5800, "creatorCost": 4200, "change": 10.4 },
-    { "country": "IT", "countryName": "意大利", "platform": "dtc", "revenue": 18000, "orders": 130, "adSpend": 2800, "creatorCost": 3300, "change": 7.4 },
-    { "country": "ES", "countryName": "西班牙", "platform": "amazon", "revenue": 33210, "orders": 220, "adSpend": 6600, "creatorCost": 3800, "change": 4.8 },
-    { "country": "ES", "countryName": "西班牙", "platform": "tiktok", "revenue": 28760, "orders": 200, "adSpend": 5300, "creatorCost": 3200, "change": 13.4 },
-    { "country": "ES", "countryName": "西班牙", "platform": "dtc", "revenue": 28130, "orders": 198, "adSpend": 3020, "creatorCost": 3800, "change": 12.5 },
-    { "country": "PL", "countryName": "波兰", "platform": "amazon", "revenue": 22000, "orders": 160, "adSpend": 4200, "creatorCost": 2200, "change": 6.2 },
-    { "country": "PL", "countryName": "波兰", "platform": "tiktok", "revenue": 24000, "orders": 180, "adSpend": 4500, "creatorCost": 2800, "change": 11.1 },
-    { "country": "PL", "countryName": "波兰", "platform": "dtc", "revenue": 14000, "orders": 100, "adSpend": 2200, "creatorCost": 2000, "change": 8.6 }
+    {
+      "country": "US",
+      "countryName": "美国",
+      "platform": "amazon",
+      "revenue": 240000,
+      "orders": 1600,
+      "adSpend": 48000,
+      "creatorCost": 10000,
+      "change": 8.4
+    },
+    {
+      "country": "US",
+      "countryName": "美国",
+      "platform": "tiktok",
+      "revenue": 210000,
+      "orders": 1500,
+      "adSpend": 30000,
+      "creatorCost": 18000,
+      "change": 16.8
+    },
+    {
+      "country": "US",
+      "countryName": "美国",
+      "platform": "dtc",
+      "revenue": 62360,
+      "orders": 380,
+      "adSpend": 10000,
+      "creatorCost": 8000,
+      "change": 11.2
+    },
+    {
+      "country": "UK",
+      "countryName": "英国",
+      "platform": "amazon",
+      "revenue": 100000,
+      "orders": 700,
+      "adSpend": 19000,
+      "creatorCost": 5500,
+      "change": 7.1
+    },
+    {
+      "country": "UK",
+      "countryName": "英国",
+      "platform": "tiktok",
+      "revenue": 100000,
+      "orders": 650,
+      "adSpend": 13000,
+      "creatorCost": 9000,
+      "change": 15.6
+    },
+    {
+      "country": "UK",
+      "countryName": "英国",
+      "platform": "dtc",
+      "revenue": 31480,
+      "orders": 200,
+      "adSpend": 4200,
+      "creatorCost": 4000,
+      "change": 5.3
+    },
+    {
+      "country": "DE",
+      "countryName": "德国",
+      "platform": "amazon",
+      "revenue": 90000,
+      "orders": 600,
+      "adSpend": 16000,
+      "creatorCost": 5000,
+      "change": -6.8
+    },
+    {
+      "country": "DE",
+      "countryName": "德国",
+      "platform": "tiktok",
+      "revenue": 40000,
+      "orders": 280,
+      "adSpend": 7000,
+      "creatorCost": 5000,
+      "change": 6.3
+    },
+    {
+      "country": "DE",
+      "countryName": "德国",
+      "platform": "dtc",
+      "revenue": 17620,
+      "orders": 120,
+      "adSpend": 3000,
+      "creatorCost": 3000,
+      "change": 2.8
+    },
+    {
+      "country": "FR",
+      "countryName": "法国",
+      "platform": "amazon",
+      "revenue": 40000,
+      "orders": 300,
+      "adSpend": 9000,
+      "creatorCost": 4000,
+      "change": 3.2
+    },
+    {
+      "country": "FR",
+      "countryName": "法国",
+      "platform": "tiktok",
+      "revenue": 50000,
+      "orders": 350,
+      "adSpend": 8500,
+      "creatorCost": 6000,
+      "change": 9.8
+    },
+    {
+      "country": "FR",
+      "countryName": "法国",
+      "platform": "dtc",
+      "revenue": 26930,
+      "orders": 170,
+      "adSpend": 3700,
+      "creatorCost": 4300,
+      "change": 8.9
+    },
+    {
+      "country": "IT",
+      "countryName": "意大利",
+      "platform": "amazon",
+      "revenue": 28000,
+      "orders": 190,
+      "adSpend": 5600,
+      "creatorCost": 2800,
+      "change": 5.6
+    },
+    {
+      "country": "IT",
+      "countryName": "意大利",
+      "platform": "tiktok",
+      "revenue": 34000,
+      "orders": 240,
+      "adSpend": 5800,
+      "creatorCost": 4200,
+      "change": 10.4
+    },
+    {
+      "country": "IT",
+      "countryName": "意大利",
+      "platform": "dtc",
+      "revenue": 18000,
+      "orders": 130,
+      "adSpend": 2800,
+      "creatorCost": 3300,
+      "change": 7.4
+    },
+    {
+      "country": "ES",
+      "countryName": "西班牙",
+      "platform": "amazon",
+      "revenue": 33210,
+      "orders": 220,
+      "adSpend": 6600,
+      "creatorCost": 3800,
+      "change": 4.8
+    },
+    {
+      "country": "ES",
+      "countryName": "西班牙",
+      "platform": "tiktok",
+      "revenue": 28760,
+      "orders": 200,
+      "adSpend": 5300,
+      "creatorCost": 3200,
+      "change": 13.4
+    },
+    {
+      "country": "ES",
+      "countryName": "西班牙",
+      "platform": "dtc",
+      "revenue": 28130,
+      "orders": 198,
+      "adSpend": 3020,
+      "creatorCost": 3800,
+      "change": 12.5
+    },
+    {
+      "country": "PL",
+      "countryName": "波兰",
+      "platform": "amazon",
+      "revenue": 22000,
+      "orders": 160,
+      "adSpend": 4200,
+      "creatorCost": 2200,
+      "change": 6.2
+    },
+    {
+      "country": "PL",
+      "countryName": "波兰",
+      "platform": "tiktok",
+      "revenue": 24000,
+      "orders": 180,
+      "adSpend": 4500,
+      "creatorCost": 2800,
+      "change": 11.1
+    },
+    {
+      "country": "PL",
+      "countryName": "波兰",
+      "platform": "dtc",
+      "revenue": 14000,
+      "orders": 100,
+      "adSpend": 2200,
+      "creatorCost": 2000,
+      "change": 8.6
+    }
   ],
   "platformTrends": {
-    "tiktok": [49, 52, 55, 50, 48, 51, 50, 53, 57, 54, 60, 65, 63, 68, 69, 65, 72, 68, 74, 77, 73, 80, 76, 82, 79, 84, 87, 85, 92, 96],
-    "amazon": [58, 61, 59, 64, 66, 63, 67, 65, 70, 69, 66, 62, 68, 64, 72, 75, 71, 78, 74, 80, 77, 83, 79, 85, 81, 88, 84, 91, 89, 95],
-    "dtc": [32, 35, 34, 37, 39, 36, 33, 38, 42, 39, 40, 39, 38, 42, 41, 44, 43, 47, 46, 52, 51, 49, 48, 53, 50, 55, 52, 57, 56, 60]
+    "tiktok": [
+      49,
+      52,
+      55,
+      50,
+      48,
+      51,
+      50,
+      53,
+      57,
+      54,
+      60,
+      65,
+      63,
+      68,
+      69,
+      65,
+      72,
+      68,
+      74,
+      77,
+      73,
+      80,
+      76,
+      82,
+      79,
+      84,
+      87,
+      85,
+      92,
+      96
+    ],
+    "amazon": [
+      58,
+      61,
+      59,
+      64,
+      66,
+      63,
+      67,
+      65,
+      70,
+      69,
+      66,
+      62,
+      68,
+      64,
+      72,
+      75,
+      71,
+      78,
+      74,
+      80,
+      77,
+      83,
+      79,
+      85,
+      81,
+      88,
+      84,
+      91,
+      89,
+      95
+    ],
+    "dtc": [
+      32,
+      35,
+      34,
+      37,
+      39,
+      36,
+      33,
+      38,
+      42,
+      39,
+      40,
+      39,
+      38,
+      42,
+      41,
+      44,
+      43,
+      47,
+      46,
+      52,
+      51,
+      49,
+      48,
+      53,
+      50,
+      55,
+      52,
+      57,
+      56,
+      60
+    ]
   },
   "countryTrends": {
-    "US": [45, 49, 47, 53, 51, 56, 54, 59, 57, 62, 60, 65],
-    "UK": [36, 39, 37, 42, 40, 44, 43, 47, 45, 50, 48, 53],
-    "DE": [49, 47, 44, 45, 41, 39, 40, 37, 35, 33, 32, 29],
-    "FR": [31, 34, 33, 36, 35, 39, 38, 42, 40, 45, 43, 47],
-    "IT": [29, 31, 30, 34, 33, 37, 36, 40, 39, 43, 42, 46],
-    "ES": [26, 28, 27, 31, 29, 34, 32, 37, 35, 40, 38, 43],
-    "PL": [22, 24, 23, 27, 26, 30, 29, 33, 31, 35, 34, 39]
+    "US": [
+      45,
+      49,
+      47,
+      53,
+      51,
+      56,
+      54,
+      59,
+      57,
+      62,
+      60,
+      65
+    ],
+    "UK": [
+      36,
+      39,
+      37,
+      42,
+      40,
+      44,
+      43,
+      47,
+      45,
+      50,
+      48,
+      53
+    ],
+    "DE": [
+      49,
+      47,
+      44,
+      45,
+      41,
+      39,
+      40,
+      37,
+      35,
+      33,
+      32,
+      29
+    ],
+    "FR": [
+      31,
+      34,
+      33,
+      36,
+      35,
+      39,
+      38,
+      42,
+      40,
+      45,
+      43,
+      47
+    ],
+    "IT": [
+      29,
+      31,
+      30,
+      34,
+      33,
+      37,
+      36,
+      40,
+      39,
+      43,
+      42,
+      46
+    ],
+    "ES": [
+      26,
+      28,
+      27,
+      31,
+      29,
+      34,
+      32,
+      37,
+      35,
+      40,
+      38,
+      43
+    ],
+    "PL": [
+      22,
+      24,
+      23,
+      27,
+      26,
+      30,
+      29,
+      33,
+      31,
+      35,
+      34,
+      39
+    ]
   },
   "alerts": [
     {
@@ -141,44 +674,2637 @@
     }
   ],
   "salesDetails": [
-    { "date": "2026-09-20", "country": "美国", "platform": "Amazon", "category": "清洁电器", "model": "VC-X1", "revenue": 28460, "orders": 174, "roi": 6.4 },
-    { "date": "2026-09-20", "country": "美国", "platform": "TikTok Shop", "category": "个护健康", "model": "HC-PRO", "revenue": 19880, "orders": 146, "roi": 7.1 },
-    { "date": "2026-09-20", "country": "英国", "platform": "TikTok Shop", "category": "厨房用品", "model": "KT-M2", "revenue": 11140, "orders": 78, "roi": 6.8 },
-    { "date": "2026-09-19", "country": "德国", "platform": "Amazon", "category": "智能家电", "model": "SM-A8", "revenue": 12620, "orders": 69, "roi": 4.5 },
-    { "date": "2026-09-19", "country": "法国", "platform": "独立站", "category": "家居收纳", "model": "HS-S3", "revenue": 8740, "orders": 52, "roi": 4.3 },
-    { "date": "2026-09-19", "country": "西班牙", "platform": "Amazon", "category": "清洁电器", "model": "VC-L2", "revenue": 6480, "orders": 41, "roi": 5.2 },
-    { "date": "2026-09-18", "country": "英国", "platform": "Amazon", "category": "智能家电", "model": "SM-A8", "revenue": 15320, "orders": 91, "roi": 5.9 },
-    { "date": "2026-09-18", "country": "法国", "platform": "TikTok Shop", "category": "个护健康", "model": "HC-LITE", "revenue": 9880, "orders": 74, "roi": 6.1 }
+    {
+      "date": "2026-09-20",
+      "country": "美国",
+      "platform": "Amazon",
+      "category": "清洁电器",
+      "model": "VC-X1",
+      "revenue": 28460,
+      "orders": 174,
+      "roi": 6.4
+    },
+    {
+      "date": "2026-09-20",
+      "country": "美国",
+      "platform": "TikTok Shop",
+      "category": "个护健康",
+      "model": "HC-PRO",
+      "revenue": 19880,
+      "orders": 146,
+      "roi": 7.1
+    },
+    {
+      "date": "2026-09-20",
+      "country": "英国",
+      "platform": "TikTok Shop",
+      "category": "厨房用品",
+      "model": "KT-M2",
+      "revenue": 11140,
+      "orders": 78,
+      "roi": 6.8
+    },
+    {
+      "date": "2026-09-19",
+      "country": "德国",
+      "platform": "Amazon",
+      "category": "智能家电",
+      "model": "SM-A8",
+      "revenue": 12620,
+      "orders": 69,
+      "roi": 4.5
+    },
+    {
+      "date": "2026-09-19",
+      "country": "法国",
+      "platform": "独立站",
+      "category": "家居收纳",
+      "model": "HS-S3",
+      "revenue": 8740,
+      "orders": 52,
+      "roi": 4.3
+    },
+    {
+      "date": "2026-09-19",
+      "country": "西班牙",
+      "platform": "Amazon",
+      "category": "清洁电器",
+      "model": "VC-L2",
+      "revenue": 6480,
+      "orders": 41,
+      "roi": 5.2
+    },
+    {
+      "date": "2026-09-18",
+      "country": "英国",
+      "platform": "Amazon",
+      "category": "智能家电",
+      "model": "SM-A8",
+      "revenue": 15320,
+      "orders": 91,
+      "roi": 5.9
+    },
+    {
+      "date": "2026-09-18",
+      "country": "法国",
+      "platform": "TikTok Shop",
+      "category": "个护健康",
+      "model": "HC-LITE",
+      "revenue": 9880,
+      "orders": 74,
+      "roi": 6.1
+    }
   ],
   "competitors": [
-    { "brand": "Brand Nova", "category": "清洁电器", "model": "N-One", "country": "美国", "platform": "Amazon", "sales": 18600, "rank": 3, "change": 2 },
-    { "brand": "HausLab", "category": "智能家电", "model": "H8", "country": "德国", "platform": "Amazon", "sales": 12400, "rank": 5, "change": -1 },
-    { "brand": "Mori Home", "category": "家居收纳", "model": "Box Pro", "country": "英国", "platform": "TikTok Shop", "sales": 11800, "rank": 2, "change": 4 },
-    { "brand": "Kivo", "category": "厨房用品", "model": "Cook Mini", "country": "法国", "platform": "独立站", "sales": 9200, "rank": 7, "change": 1 },
-    { "brand": "PureDay", "category": "个护健康", "model": "P3", "country": "西班牙", "platform": "Amazon", "sales": 7900, "rank": 9, "change": -2 },
-    { "brand": "Brand Nova", "category": "清洁电器", "model": "N-Lite", "country": "英国", "platform": "TikTok Shop", "sales": 15400, "rank": 4, "change": 3 }
+    {
+      "brand": "Dreame H12 Pro Ultra Nass /Trockenstaubsauger, mit Selbstreinigungsfunktion, Schmutzerkennung, LED Anzeige, 35 Minuten Laufzeit, 900 ml Kapazität, schwarz",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 58,
+      "rank": 4,
+      "change": 0
+    },
+    {
+      "brand": "Dreame G10 Pro Nass Trockenstaubsauger, All in One Staubsauger mit automatischer Selbstreinigung, Hartboden Bodenreinigungsmaschine, 35 Minuten Laufzeit, Kantenreinigung, selbstfahrender Staubsauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 55,
+      "rank": 6,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro FlexReach Nass-/Trockensauger, flaches 180°-Design, trocknet in 5 Minuten, 18.000 Pa Saugkraft, heißes Waschen bei 90 °C, Reinigung an beiden Seiten, reinigt in 50 Minuten",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 39,
+      "rank": 15,
+      "change": 0
+    },
+    {
+      "brand": "Shark HydroVac kabelgebundener 3-in-1 Nass- und Trockensauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 22,
+      "rank": 37,
+      "change": 0
+    },
+    {
+      "brand": "Roborock F25 BX Nass-Trocken-Akkusauger, 20.000 Pa HyperForce, 2-in-1 Saug- & Wischfunktion, kabellos",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 27,
+      "rank": 29,
+      "change": 0
+    },
+    {
+      "brand": "dreame T16 Pro Steam Nass- & Trockensauger, 200 °C Dampf Wischen m. 90 °C Wasser, niedrige Stellen bis 9,85 cm, 30.000 Pa, Bürstenre. m. Dampf+Heißwasser, App-Steuerung",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 8,
+      "rank": 89,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Akku Stabstaubsauger, 600 W, 55.000 Pa Saugkraft, Anti Haarverwicklungsbürste mit LED Licht, 90° klappbares Saugrohr, 7 fach Filtersystem, freistehend, 65 Min Laufzeit, für Hartböden, Teppiche & Tierhaare",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 48,
+      "rank": 10,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 Nass und Trockenstaubsauger Selbstreinigend Kabellos Bodenreiniger Leichter Mopp für Hartböden Tierhaare Essensreste Rundum Reinigung ohne Auslass",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 27,
+      "rank": 30,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Slim V8 Apex Auto Staubsauger, tragbarer kabelloser Mini Staubsauger 4‑in‑1 mit Saugkraft von 19 000 Pa, USB‑C‑Aufladung, 2 Saugmodi, Handstaubsauger für Auto, Büro und Tastatur (schwarz)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 66,
+      "rank": 2,
+      "change": 0
+    },
+    {
+      "brand": "Shark PowerDetect kabelloser Staubsauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 7,
+      "rank": 99,
+      "change": 0
+    },
+    {
+      "brand": "Shark PowerDetect Clean & Empty Akku-Staubsauger für Tierhaare",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 5,
+      "rank": 131,
+      "change": 0
+    },
+    {
+      "brand": "Wasch-Sauger Waschsauger Teppichreiniger Polsterreiniger, Nasssauger Sofa Reiniger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 44,
+      "rank": 13,
+      "change": 0
+    },
+    {
+      "brand": "dreame H12s Nass Trockenstaubsauger, intelligente Bodenreinigung, kabelloser Staubsauger und Wischer für Hartböden, Kantenreinigung mit Schmutzerkennung",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 15,
+      "rank": 49,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Milbensauger & Matratzenreiniger, 4 fach Reinigungssystem mit klopfender Bürste, Ultraschall & 55°C Heißluft, 15.000 Pa Saugkraft, entfernt Hausstaubmilben & Allergene, für Allergiker, Matratze, Bett, Sofa & Kissen",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 31,
+      "rank": 27,
+      "change": 0
+    },
+    {
+      "brand": "dreame G12 Pro Flex T Staubsauger und Nassreiniger, leistungsstarke Saugleistung von 23.000 Pa netto, für trockene/nasse Oberflächen, ultraleicht (4,1 kg), schlank (9,9 cm), zwei Seiten, keine Verhedderung, Trocknung mit heißer Luft (95 °C).",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 8,
+      "rank": 90,
+      "change": 0
+    },
+    {
+      "brand": "Uwant D500 Nass /Trockensauger, Geruchskontrolle im Abwasserbehälter, 180° flachliegende Saugwippe, 17.000 Pa Saugleistung, leise Heißtrocknung bis 65 °C, selbstreinigend, freie Faserführung, IPX6 wasserdicht für Böden",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 9,
+      "rank": 76,
+      "change": 0
+    },
+    {
+      "brand": "DREAME H15 Pro Heat Kabelloser Staubsauger, Nass/Trocken 2in1, 22000 Pa Saugleistung, 85℃ Heißwasser automatische Reinigung,Tangle Free Technologie",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 4,
+      "rank": 146,
+      "change": 0
+    },
+    {
+      "brand": "uwant D500 Wet Dry Vacuum Cleaner, Intelligent Stain Detection, 180° Reclining Design, Edge Cleaning 2 mm, Push in Base Station, Electrolytic Water, 17000Pa Suction Power",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 8,
+      "rank": 91,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Akku Stabstaubsauger, 45.000 Pa Saugkraft, Anti Haarverwicklungsbürste mit LED Licht, 90° klappbares Metallrohr, 6 fach Filtersystem, freistehend, 55 Min Laufzeit, 500 ml Staubbehälter, für Tierhaare, Hartböden & Teppiche",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 18,
+      "rank": 44,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12s Nass Trockenstaubsauger, intelligente Bodenreinigung, kabelloser Staubsauger und Wischer für Hartböden, Kantenreinigung mit Schmutzerkennung",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 8,
+      "rank": 92,
+      "change": 0
+    },
+    {
+      "brand": "Dreame D20 Pro Plus Staubsauger Roboter, 13.000 Pa Saugkraft, DuoBrush für Tierhaare, Corner Clean, Selbstreinigung, Hindernis mit LDS-Navigation & Laser, saugt und wischt, Hartböden & Teppiche",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 5,
+      "rank": 132,
+      "change": 0
+    },
+    {
+      "brand": "Dreame N20 tragbarer Dampf Bodenfleckenreiniger, 17.000 Pa Saugkraft entfernt tiefsitzenden Schmutz, hygienische Tiefenreinigung mit 100 °C Dampfkraft, Reinigung für verschiedene Stoffarten, Dampfspezifische Aufsätze",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 7,
+      "rank": 100,
+      "change": 0
+    },
+    {
+      "brand": "V16 Kabelloser Handstaubsauger für das Auto, leistungsstarker tragbarer 6-in-1-Staubsauger mit intelligentem Display und mehreren Reinigungszubehörteilen für Auto, Zuhause, Büro und Haustiere, tragbarer kabelloser Hochleistungsstaubsauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 35,
+      "rank": 18,
+      "change": 0
+    },
+    {
+      "brand": "Yanhama Nass /Trocken Bodenreiniger, 180° flaches Design, Anti Verhedderungsmechanismus; erzeugt beim Start elektrolysiertes Wasser und reinigt bis an die Ränder, ideal für harte Böden, ohne blinde Stellen",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 6,
+      "rank": 114,
+      "change": 0
+    },
+    {
+      "brand": "Xiaomi Vacuum Cleaner G20 Lite - Maximale Saugleistung von 18.000Pa, Staubentleerung per Knopfdruck, Verbesserte Düsenaufsätze",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 8,
+      "rank": 93,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Waschsauger 600W, tragbarer Teppich- und Polsterreiniger mit Sprüh- und Saugfunktion, 15.000 Pa Saugkraft, für Sofa, Teppich, Autositze und Matratzen, entfernt hartnäckige Flecken, Textilreinigungsmaschine inkl. 3 Aufsätze",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 12,
+      "rank": 62,
+      "change": 0
+    },
+    {
+      "brand": "Roborock QV 35S Saugroboter mit Wischfunktion, 10.000 Pa HyperForce Saugkraft, Anti-Tangle-Bürsten, Anhebbare Schleudermopps, Intelligente Hindernisvermeidung, Multifunktions-Dockingstation,Weiß",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 2,
+      "rank": 188,
+      "change": 0
+    },
+    {
+      "brand": "VONKO Saugroboter mit Wischfunktion, S6 Pro Staubsauger Roboter mit Absaugstation, 8000Pa starke Saugkraft, LiDAR-Navigation, 180 Min Laufzeit, Roboterstaubsauger für Tierhaare, Teppiche & Hartböden",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 4,
+      "rank": 147,
+      "change": 0
+    },
+    {
+      "brand": "Xiaomi Robot Vacuum X20+",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 2,
+      "rank": 189,
+      "change": 0
+    },
+    {
+      "brand": "JONR-ED12 Lite Akku-Staubsauger, Nass- und Trockenstaubsauger, 1 mm Kantenreinigung, Anti-Tangle-System, leichter Bodenreiniger für Hartböden, Tierhaare",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 4,
+      "rank": 148,
+      "change": 0
+    },
+    {
+      "brand": "Dreame G12 Pro Flex T aspirapolvere lavapavimenti, potente aspirazione di 23.000 Pa netti. superfici asciutte/umide, ultraleggero 4,1 kg, sottile 9,9 cm, netti. due bordi, zero sovrapposizioni., asciugatura ad aria calda 95 °C",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 50,
+      "rank": 8,
+      "change": 0
+    },
+    {
+      "brand": "DREAME H12 Pro FlexReach Aspirapolvere Lavapavimenti, Design Piatto a 180°, 5 Min di Asciugatura, Aspirazione da 18.000 Pa, Pulizia a caldo a 90 °C, 50 Min di pulizia continua",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 25,
+      "rank": 31,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H15 Pro Aspirapolvere Bagnato e Asciutto, GapFree AI DescendReach Robot Braccio, Triple Edge Cover, 21kPa Potenza di Aspirazione, 0 Groviglio, 100 ° C Spazzola Lavaggio, 5min 90 ° C Asciugatura, 180 ° Lie Flat",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 6,
+      "rank": 115,
+      "change": 0
+    },
+    {
+      "brand": "dreame G10 Pro aspirapolvere lavapavimenti, Aspirapolvere Wet Dry, Mop Aspirapolvere All in One con autopulente automatica, Macchina per la pulizia del pavimento duro, 35 minuti di autonomia, Pulizia dei bordi, Mop Aspirapolvere semovente",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 12,
+      "rank": 63,
+      "change": 0
+    },
+    {
+      "brand": "dreame H12s Aspirapolvere Lavapavimenti, Aspirapolvere Wet and Dry, Pulizia Intelligente del Pavimento, Aspirapolvere Wireless e Tergicristallo per Pavimenti Duri, Pulizia dei Bordi con Rilevamento dello Sporco",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 6,
+      "rank": 116,
+      "change": 0
+    },
+    {
+      "brand": "dreame H12s aspirapolvere lavapavimenti, Aspirapolvere Wet and Dry, Pulizia Intelligente del Pavimento, Aspirapolvere Wireless e Tergicristallo per Pavimenti Duri, Pulizia dei Bordi con Rilevamento dello Sporco",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 8,
+      "rank": 94,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro Ultra Aspirapolvere Wet / Dry con funzione autopulente, rilevamento sporco, display a LED, autonomia 35 minuti, capacità 900 ml, nero",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 6,
+      "rank": 117,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Slim V8 Apex aspirapolvere per auto, mini aspirapolvere portatile senza fili 4 in 1 con potenza di aspirazione di 19 000 Pa, ricarica USB‑C, 2 modalità di aspirazione, aspirapolvere a mano per auto, ufficio e tastiera (nero)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 14,
+      "rank": 52,
+      "change": 0
+    },
+    {
+      "brand": "DREAME-L40 Ultra AE Aspirapolvere robot con funzione mocio, potenza di aspirazione di 19.000 Pa, molte spazzole e mocio flessibile, sporco bagnato e asciutto, il dock all-in-1 svuota la polvere",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 2,
+      "rank": 190,
+      "change": 0
+    },
+    {
+      "brand": "HAUSHOF StainZapper Lavapavimenti, Pulitore per tappeti 400W, Pulitore per moquette con doppi serbatoi 1,1L+0,5L, tubo 1,2m, 85dB, 2 ugelli per auto/cuscini/tende/animali, accessori inclusi，Include soluzione detergente",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 8,
+      "rank": 95,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 Lite/ED12 aspirapolvere a umido e a secco senza fili con pulizia dei bordi a 1 mm, sistema anti nodi per pavimenti duri e peli di animali",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 4,
+      "rank": 149,
+      "change": 0
+    },
+    {
+      "brand": "X7 Aspirapolvere senza Fili Potente, Scopa Elettrica senza Filo con Autoportante, versione mano e verticale, leggero, spazzola anti-nodi, autoportante, base di ricarica da parete, filtrazione a 5 livelli, ultra silenzioso, per pavimenti,",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 8,
+      "rank": 96,
+      "change": 0
+    },
+    {
+      "brand": "K5 1700 W 25 kPa pulitore a vapore per tappeti, 5 livelli di temperatura, 3 modalità di aspirazione, dispositivo portatile con nebulizzazione, serbatoi grandi e display touch led per divani, materassi e macchie degli animali",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 5,
+      "rank": 133,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN F01 aspirapolvere a batteria, 40000 Pa/500 W/50 minuti di funzionamento senza fili con display LED HD, pulizia profonda, spazzola anti-nodi per tappeti, pavimenti duri e peli di animali.",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 6,
+      "rank": 118,
+      "change": 0
+    },
+    {
+      "brand": "MOVA X4 Pro aspirapolvere a secco e umido, pulizia con acqua calda, autopulizia a 100 °C con acqua calda, anti-intrecciamento, potenza di aspirazione fino a 20.000 Pa, inclinabile a 180°, stazione di spinta, spazzola con LED",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 2,
+      "rank": 191,
+      "change": 0
+    },
+    {
+      "brand": "CIRCLIO Aspirapolvere senza fili, autonomia della batteria fino a 75 minuti, display touch LED, autoportante, anti-nodi, per tappeti, pavimenti e peli di animali,T80",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 4,
+      "rank": 150,
+      "change": 0
+    },
+    {
+      "brand": "ECOVACS DEEBOT T90 MAX Robot Aspirapolvere Omnidirezionale con Lavaggio, 30.000 Pa Blast OZMO ROLLER 3.0, TruEdge 3.0, ZeroTangle 4.0, Pulizia dei BORDI, Lavaggio Mocio a Caldo, Nero",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 212,
+      "change": 0
+    },
+    {
+      "brand": "Dreame Robot aspirapolvere L50 Ultra AE, lavaggio con panno autopulente a 100 °C, 28000 Pa | pulizia profonda di angoli e bordi, stazione di ricarica intelligente multifunzione PowerDock, navigazione LDS ed evitamento degli ostacoli tramite laser",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 213,
+      "change": 0
+    },
+    {
+      "brand": "ECOVACS DEEBOT T50 PRO Omni Gen3 robot aspirapolvere con funzione lavapavimenti, 25.000 Pa, AIVI 3D 3.0, aggiunta automatica di soluzione per la pulizia, pulizia del lavapavimenti a 75 °C, asciugatura ad aria calda, 81 mm, nero lucido, garanzia di 2 anni",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 214,
+      "change": 0
+    },
+    {
+      "brand": "Robot aspirapolvere Dreame D20 Pro Plus, potenza di aspirazione 13.000 Pa, DuoBrush per peli di animali domestici, pulizia degli angoli, rimozione automatica, ostacolo con navigazione LDS & laser, aspirapolvere e straccio, pavimenti duri e tappeti",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 2,
+      "rank": 192,
+      "change": 0
+    },
+    {
+      "brand": "Lefant M330S – Robot 3 in 1 con navigazione dToF, mappatura intelligente e 5000Pa di potenza per una pulizia completa e silenziosa",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 3,
+      "rank": 167,
+      "change": 0
+    },
+    {
+      "brand": "Aspirapolvere Portatile per Materassi 10kPa – Anti-Acaro, UV & Filtro HEPA, Rimozione Polvere Profonda per Letti, Divani e Tessuti – Cordless 1500mAh, 3 Livelli di Aspirazione",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 9,
+      "rank": 77,
+      "change": 0
+    },
+    {
+      "brand": "Aspirapolvere Portatile Cordless per Auto, Potente Aspirapolvere Portatile 6 in 1 con Display Intelligente e Accessori Multi Pulizia per Auto, Casa, Ufficio, Animale Domestico Aspirapolvere Portatile Cordless ad Alta Potenza",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 13,
+      "rank": 57,
+      "change": 0
+    },
+    {
+      "brand": "Pulitore portatile per tappeti e tessuti con 3 testine, per divani e animali domestici, pulizia profonda per tappeti, auto e ambienti familiari",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 4,
+      "rank": 151,
+      "change": 0
+    },
+    {
+      "brand": "Vorwerk FOLLETTO VK150 RIGENERATA CON SACCHETTI GREEN BAG Aspirapolvere con Design Moderno e Funzionalità Avanzate Potente Motore e Sistema di Filtrazione Ad Alta Efficienza",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 215,
+      "change": 0
+    },
+    {
+      "brand": "Pulitore a vapore portatile multi‑superficie Phueut ad alta pressione con 11 pezzi di ricambio, pulitore a vapore multiuso per uso domestico, cucina e auto",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 7,
+      "rank": 101,
+      "change": 0
+    },
+    {
+      "brand": "Robot aspirapolvere per la pulizia delle finestre Puruikai, elettrodomestici, dispositivo di pulizia automatico, potenza di aspirazione di 5600 Pa, controllo remoto e navigazione, batteria ricaricabile, autonomia di 20 min #top picks",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 4,
+      "rank": 152,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H14 AE aspirapolvere bagnato/asciutto, 18kPa,180°Piatto,Spazzola a doppia bordatura, 60 °C Spazzolamento e asciugatura,2 direzioni Rosso, Trappola per sporcizia,App,LED,Tappeto＆pavimento",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 216,
+      "change": 0
+    },
+    {
+      "brand": "600W Fabric Cleaning Machine – Black and White, can deep clean stains on carpets, car seats, pets, stairs, sofas, etc., suitable for cars/car detailing, includes 3 accessories.",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 3,
+      "rank": 168,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Cruise V11 APEX aspirapolvere portatile senza fili, aspirapolvere 4‑in‑1 con manico girevole a 180° “AxLoop”, motore brushless da 145 W, touchscreen LED, 3 impostazioni di potenza per gli angoli di casa, cucina e fessure",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 2,
+      "rank": 193,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro FlexReach Aspirateur et laveur, portée plate à 180°, séchage en 5 minutes, puissance d’aspiration de 18 000 Pa, lavage à 90 °C, nettoie les deux côtés, jusqu’à 50 minutes de temps de nettoyage",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 42,
+      "rank": 14,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro Ultra Aspirateur Eau et poussière, Lavage 60 °C, Séchage 30 Min, Nettoyage Auto Double Rotation avec Racleur Résistant, Aspiration 16 kPa, Brosse 2 Bords, Détection Intelligents",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 35,
+      "rank": 19,
+      "change": 0
+    },
+    {
+      "brand": "DREAME L10s Ultra Gen 2 Robot Aspirateur Laveur 10 000 Pa, Technologie MopExtend RoboSwing, Base Entièrement Automatique, Mode Animaux, 32 réglages de niveau d'eau, Système de lavage des sols DuoScrub, TikTokShopBlackFriday",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 14,
+      "rank": 53,
+      "change": 0
+    },
+    {
+      "brand": "Dreame G10 Pro aspirateur sec et humide, vadrouille tout en un avec autonettoyage automatique, Machine de nettoyage de sol pour sols durs, autonomie de 35 minutes, nettoyage des bords, vadrouille automotrice",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 24,
+      "rank": 33,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN F01 aspirateur sans fil, 40 000 Pa / 500 W / 50 minutes d’autonomie avec écran LED HD, nettoyage en profondeur, brosse anti-emmêlement pour tapis, sols durs et poils d’animaux.",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 33,
+      "rank": 24,
+      "change": 0
+    },
+    {
+      "brand": "dreame G12 Pro Flex T Aspirateur Laveur, Aspiration puissante de 23 000 Pa nett. surfaces sèches/humides, ultra léger 4,1 kg, fin 9,9 cm, nett. deux bords, zéro enchev., séch. air chaud 95 °C",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 10,
+      "rank": 72,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN V28 aspirateur sans fil 45 000 Pa / 500 W / 50 min, capacité de 1,6 L, super silencieux avec écran intelligent, mode automatique et brosse anti‑emmêlement pour tapis, sols durs et poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 14,
+      "rank": 54,
+      "change": 0
+    },
+    {
+      "brand": "Aspirateur à main sans fil pour voiture, puissant, Portable 6 en 1, avec affichage intelligent et accessoires de nettoyage multiples, pour voiture, maison, bureau, animaux de compagnie",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 48,
+      "rank": 11,
+      "change": 0
+    },
+    {
+      "brand": "JONR Aspirateur eau et poussière sans fil ED12, balai à franges, brosse de nettoyage des bords, 6 mm, auto-nettoyant, réservoir d’eau de 850 ml, anti-enchevêtrement pour sols durs, poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 7,
+      "rank": 102,
+      "change": 0
+    },
+    {
+      "brand": "Dreame T16 Pro Heat aspirateur laveur de sols avec chauffage, aspiration jusqu’à 30 000 Pa, eau chaude propre à 90°C, rinçage thermique : la graisse disparaît en quelques passages",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 2,
+      "rank": 194,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 Lite aspirateur eau et poussière aspirateur sans fil avec nettoyage des bords à 1 mm système anti nouage pour sols durs et poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 6,
+      "rank": 119,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Slim V8 Apex aspirateur pour voiture, mini aspirateur portable sans fil 4 en 1 avec puissance d'aspiration de 19 000 Pa, charge USB‑C, 2 modes d'aspiration, aspirateur à main pour voiture, bureau et clavier (noir)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 19,
+      "rank": 41,
+      "change": 0
+    },
+    {
+      "brand": "DREAME H15 Pro Heat Aspirateur Laveur, Nettoyage des sols à 85 °C, bras robotisé IA GapFree, capteur RVB intelligent, 22 kPa, 0 nœuds, lavage brosse à 100°C, séchage en 5 min à 90°C,contrôle par appli, TikTokShopBlackFriday",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 2,
+      "rank": 195,
+      "change": 0
+    },
+    {
+      "brand": "Aspirateur balai sans fil Shark PowerDetect Speed Luxe Clean & Empty",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 2,
+      "rank": 196,
+      "change": 0
+    },
+    {
+      "brand": "Aspirateur anti acariens 15 000 Pa pour matelas et canapé, ultrasons & air chaud à 55 °C, élimine la poussière, les acariens et les allergènes, idéal pour le linge de lit, les oreillers, les tapis et les jouets en peluche",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 12,
+      "rank": 64,
+      "change": 0
+    },
+    {
+      "brand": "Machine de nettoyage des tissus Noir et blanc, peut nettoyer en profondeur les taches sur les tapis, les sièges de voiture, les animaux domestiques, les escaliers, les canapés, etc., adapté aux voitures/détails de voiture",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 10,
+      "rank": 73,
+      "change": 0
+    },
+    {
+      "brand": "Dreame Matrix 10 Ultra, robot aspirateur avec fonction de lavage, Matrix 10 Ultra avec sac, remplacement du mop, trois nettoyants, franchit les obstacles, 30 000 Pa, blanc",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 1,
+      "rank": 217,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN V28 Pro 45000Pa/550W/55 min aspirateur sans fil, aspirateur à batterie avec réglage automatique de l’aspiration, brosse anti-emmêlement et écran LED pour tapis, sols durs, poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 6,
+      "rank": 120,
+      "change": 0
+    },
+    {
+      "brand": "dreame H15 Pro Aspirateur Laveur, Bras robotisé AI DescendReach, Triple arête, 21 kPa, antinœuds, Lavage Brosse immersif 100°C, séchage 5 Min 90°C, portée à Plat 180°, contrôle par Application, TikTokShopBlackFriday",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 2,
+      "rank": 197,
+      "change": 0
+    },
+    {
+      "brand": "Nettoyeur vapeur multi-surfaces portable sous pression Phueut avec 11 pièces de rechange, nettoyeur vapeur multi-usages pour usage domestique, cuisine et voiture",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 18,
+      "rank": 45,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12s aspirateur humide et sec , nettoyage Intelligent des sols, aspirateur et essuie glace sans fil pour sols durs, nettoyage des bords avec détection de saleté",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 3,
+      "rank": 169,
+      "change": 0
+    },
+    {
+      "brand": "dreame D20 Pro Plus Robot Aspirateur 2-en-1, 13 000 Pa, Double Brosse, Auto-Vidage, Laser Navigation, Capteur Distance, Poils d’Animaux, Coins, Sols Durs & Tapis, Batterie 5200 mAh",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 3,
+      "rank": 170,
+      "change": 0
+    },
+    {
+      "brand": "Aspirateur balai sans fil Shark PowerPro, 40 min d'autonomie",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 3,
+      "rank": 171,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 aspirateur humide et sec, nettoyeur de sol sans fil autonettoyant, aspirateur vadrouille léger pour sols durs, poils d'animaux, restes de nourriture nettoyage complet sans sortie",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 3,
+      "rank": 172,
+      "change": 0
+    },
+    {
+      "brand": "Robot aspirateur Shark PowerDetect avec autovidage RV2820VEEU",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 1,
+      "rank": 218,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Aspirateur balai sans fil 500 W / 45 000 Pa, jusqu’à 50 min d’autonomie, écran LED intelligent, design autoportant et pliable, brosse anti-emmêlement pour tapis, sols durs et poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 5,
+      "rank": 134,
+      "change": 0
+    },
+    {
+      "brand": "dreame H12s aspirateur humide et sec , nettoyage Intelligent des sols, aspirateur et essuie glace sans fil pour sols durs, nettoyage des bords avec détection de saleté",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 3,
+      "rank": 173,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN Aspirateur pour matelas, aspirateur de lit 16 kPa avec lumière UV-C à 253,7 nm, chaleur jusqu’à 140 °F, filtre HEPA et technologie ultrasonique, aspirateurs portatifs polyvalents pour lit, canapé et lit bébé (avec câble, 500 W)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 7,
+      "rank": 103,
+      "change": 0
+    },
+    {
+      "brand": "Uwant D500 Vacuum Cleaner Washer 17,000 Pa,Self-Cleaning and Drying 149 °F",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 2,
+      "rank": 198,
+      "change": 0
+    },
+    {
+      "brand": "dreame R10 Aspirateur Balai sans Fil, Aspiration puissante de 120AW, Autonomie de 60 Min, Filtration avancée, Brosse Multi-Surfaces avec éclairage LED Idéal pour ménage, Poils d'animaux et Tapis",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 3,
+      "rank": 174,
+      "change": 0
+    },
+    {
+      "brand": "PrettyCare aspiradora inalámbrica 25KPa, limpieza de suelos, 45 minutos de autonomía, se mantiene de pie por sí sola, tubo flexible de 180°, ideal para el hogar, el pelo de mascotas y todo tipo de suelos 23",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 32,
+      "rank": 26,
+      "change": 0
+    },
+    {
+      "brand": "Dreame Aspiradora en seco y húmedo H12 Pro, 300W, Pantalla LED, Autonomía hasta 35min, Tanque 900ml, Cepillo de limpieza de doble filo, Base de Autolimpieza y Secado en Caliente",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 15,
+      "rank": 50,
+      "change": 0
+    },
+    {
+      "brand": "HAUSHOF StainZapper aspirador lavador, limpiador de alfombras de 400W, limpiador de moquetas con doble depósito de 1,1L+0,5L, manguera de 1,2m, 85dB, 2 boquillas para coche/cojines/cortinas/mascotas, accesorios incluidos，Incluye solución de limpieza",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 19,
+      "rank": 42,
+      "change": 0
+    },
+    {
+      "brand": "Aspiradora inalámbrica de mano para coche, aspirador portátil 6 en 1 potente, con pantalla con inteligente y accesorios de limpieza múltiple para coche, hogar, oficina, mascota",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 50,
+      "rank": 9,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN aspiradora sin cable, 250 W/25000 Pa, aspiradora de mano inalámbrica de 45 minutos, con pantalla táctil LED, diseño anti-enredos, ajustable en posición vertical, adecuada para alfombras/suelos duros/pelos de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 11,
+      "rank": 66,
+      "change": 0
+    },
+    {
+      "brand": "V16 500W 75 kPa aspiradora sin cable con pantalla táctil, modo automático, sensor de polvo infrarrojo, filtración HEPA de 6 niveles, autonomía de 60 min, batería extraíble, pantalla LED para suelos duros, alfombras y pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 6,
+      "rank": 121,
+      "change": 0
+    },
+    {
+      "brand": "JONR H2 PRO aspiradora para líquidos y sólidos, 20000 Pa, diseño innovador sin olores | autolimpieza con ahorro de energía PTC, depósito de agua de 1500 ml, plano a 180°, adecuado para cocina, dormitorio y sala de estar",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 153,
+      "change": 0
+    },
+    {
+      "brand": "530W / 48 kPa / 70 minutos, aspiradora sin cable, 3 niveles de potencia, ideal para la limpieza del hogar, diseño autónomo, pantalla táctil inteligente, perfecta para pelos de mascotas, alfombras y suelos duros 01",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 154,
+      "change": 0
+    },
+    {
+      "brand": "JONR aspiradora en seco y húmedo ED12 Lite, aspiradora inalámbrica con batería con , limpieza de bordes de 1 mm, sistema antienredos, limpiador de suelos ligero para suelos duros, pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 155,
+      "change": 0
+    },
+    {
+      "brand": "YADIMI, Aspirador de tapicerías, Depósito extraíble de 1,7L de agua limpia y 1L de agua residual, Limpieza rápida de derrames y manchas, Suciedad de Mascotas, Potencia de 530W",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 8,
+      "rank": 97,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN F01 aspiradora sin cable, 40000 Pa/500 W/50 minutos, con pantalla LED HD, limpieza profunda y cepillo anti-enredos para alfombras, suelos duros y pelo de mascotas.",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 6,
+      "rank": 122,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 aspiradora húmeda y en seco autolimpiable inalámbrica limpiador de suelos mopa ligera para suelos duros pelo de mascotas restos de comida limpieza integral sin salida",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 3,
+      "rank": 175,
+      "change": 0
+    },
+    {
+      "brand": "Limpiador Portátil de Alfomy Tapicería con 3 Cabezales para Sofá y Mascotas Limpieza Profunda para Alfombras Coches y Familiares",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 7,
+      "rank": 104,
+      "change": 0
+    },
+    {
+      "brand": "Belibuy-aspiradora inalámbrica V8 max para coche, miniaspirador portátil 4 en 1 para coche y hogar, potencia de succión de 9000pa, carga tipo C, 2 modos de aspiración, aspiradora de mano para coche, escritorio, teclado (negro)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 14,
+      "rank": 55,
+      "change": 0
+    },
+    {
+      "brand": "Limpiador a vapor portátil multiusos con presión Phueut, con 11 pzas de repuesto, para uso doméstico, cocina y coche",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 7,
+      "rank": 105,
+      "change": 0
+    },
+    {
+      "brand": "Belibuy V13 Aspiradora inalámbrica de mano para coche, aspirador portátil 6 en 1 potente, con pantalla con inteligente y accesorios de limpieza múltiple para coche, hogar, oficina, mascota",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 8,
+      "rank": 98,
+      "change": 0
+    },
+    {
+      "brand": "Carpet Cleaner Machine, Portable Upholstery Spot Cleaner with Deep Spray Cleaning & Strong Suction, Stain Remover for Carpet, Sofa, Car Seats & Stairs, 220-240V UK Plug, Hose Self-Cleaning",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 3,
+      "rank": 176,
+      "change": 0
+    },
+    {
+      "brand": "ECOVACS WINBOT Mini Robot Limpiacristales automático, succión 7500 Pa, autonomía 30 min, nebulización por ultrasonidos, control por app móvil, 9 niveles de protección anticaídas, apto para ventana cristales, espejos y azulejos, 2 años de garantía oficial",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 219,
+      "change": 0
+    },
+    {
+      "brand": "Aigostar Aspirador con Cable 2 en 1, 600 W, Aspirador Vertical, 13 kPa, Capacidad 1 L, Ligero, Ideal para Hogar, Sofá y Limpieza de Pelos de Mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 5,
+      "rank": 135,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 aspiradora inalámbrica para seco y húmedo, autolimpiante; mopa fácil de usar para suelos duros, elimina el pelo de mascotas y los restos de comida; limpiadora versátil sin salida de aire",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 220,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Aspiradora Antiacaros 15.000 Pa con Ultrasonido y Aire Caliente 55°C, Aspirador de Colchón con Filtro HEPA de Metal, Elimina el 99,9% de Ácaros y Alérgenos, para Cama, Sofá y Almohadas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 2,
+      "rank": 199,
+      "change": 0
+    },
+    {
+      "brand": "GT8Pro Aspiradora y Fregadora 3 en 1 con Tecnología de Agua Electrolizada, Aspiradora en Seco y Húmedo Autolimpiable Inalámbrica, Limpiador de Suelos para Pelos de Mascotas y Restos de Comida",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 221,
+      "change": 0
+    },
+    {
+      "brand": "Limpiador mini portable para alfombras y tapicerías, con 5 herramientas, sistema de doble depósito, autolimpieza, ultraligero, detallador automotriz, material ABS",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 2,
+      "rank": 200,
+      "change": 0
+    },
+    {
+      "brand": "Aigostar Aspirador con Cable 2 en 1, 600 W, Aspirador Vertical, 13 kPa, Capacidad 1 L, Ligero, Ideal para Hogar, Sofá y Limpieza de Pelos de Mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 156,
+      "change": 0
+    },
+    {
+      "brand": "Aspiradora para automóvil portátil inalámbrica de 9000 Pa, mini aspiradora de mano con pantalla LCD y múltiples boquillas, alta potencia para uso en seco y húmedo, apta para automóvil, hogar, oficina, mascotas, diseño compacto y portátil (azul).",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 5,
+      "rank": 136,
+      "change": 0
+    },
+    {
+      "brand": "Cecotec Limpiador Aspirador de Tapicerías y Alfombras con Cable Conga 6000 Carpet&Spot Clean XXL Advance. 600W, 15kPa",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 222,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN V28 Pro 45000Pa/550W/55min aspiradora sin cable, aspiradora con batería con ajuste automático de succión, cepillo anti-enredos y pantalla LED para alfombras, suelos duros y pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 223,
+      "change": 0
+    },
+    {
+      "brand": "Limpiador puntual de 500 W, 12 kPa – Limpiador manual para alfombras, sofás y cortinas con función integrada de pulverización y aspiración – Dispositivo de limpieza doméstica con 3 cabezales de limpieza",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 2,
+      "rank": 201,
+      "change": 0
+    },
+    {
+      "brand": "Limpiador a vapor portátil de alta presión: kit multi superficies 11 en 1 para la limpieza completa del hogar, cocina y coche",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 3,
+      "rank": 177,
+      "change": 0
+    },
+    {
+      "brand": "Aspiradora industrial para uso en seco y húmedo, potente sin bolsa de 19.000 Pa, 4 ruedas, filtrado HEPA, boquilla para ranuras, eléctrica profesional, para uso en taller",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 2,
+      "rank": 202,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro Ultra Nass /Trockenstaubsauger, mit Selbstreinigungsfunktion, Schmutzerkennung, LED Anzeige, 35 Minuten Laufzeit, 900 ml Kapazität, schwarz",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 54,
+      "rank": 7,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 Nass und Trockenstaubsauger Selbstreinigend Kabellos Bodenreiniger Leichter Mopp für Hartböden Tierhaare Essensreste Rundum Reinigung ohne Auslass",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 34,
+      "rank": 22,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro FlexReach Nass-/Trockensauger, flaches 180°-Design, trocknet in 5 Minuten, 18.000 Pa Saugkraft, heißes Waschen bei 90 °C, Reinigung an beiden Seiten, reinigt in 50 Minuten",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 23,
+      "rank": 34,
+      "change": 0
+    },
+    {
+      "brand": "Shark HydroVac kabelgebundener 3-in-1 Nass- und Trockensauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 17,
+      "rank": 46,
+      "change": 0
+    },
+    {
+      "brand": "Roborock F25 BX Nass-Trocken-Akkusauger, 20.000 Pa HyperForce, 2-in-1 Saug- & Wischfunktion, kabellos",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 21,
+      "rank": 38,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Akku Stabstaubsauger, 600 W, 55.000 Pa Saugkraft, Anti Haarverwicklungsbürste mit LED Licht, 90° klappbares Saugrohr, 7 fach Filtersystem, freistehend, 65 Min Laufzeit, für Hartböden, Teppiche & Tierhaare",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 35,
+      "rank": 20,
+      "change": 0
+    },
+    {
+      "brand": "Shark PowerDetect kabelloser Staubsauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 6,
+      "rank": 123,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Milbensauger & Matratzenreiniger, 4 fach Reinigungssystem mit klopfender Bürste, Ultraschall & 55°C Heißluft, 15.000 Pa Saugkraft, entfernt Hausstaubmilben & Allergene, für Allergiker, Matratze, Bett, Sofa & Kissen",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 36,
+      "rank": 17,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Slim V8 Apex Auto Staubsauger, tragbarer kabelloser Mini Staubsauger 4‑in‑1 mit Saugkraft von 19 000 Pa, USB‑C‑Aufladung, 2 Saugmodi, Handstaubsauger für Auto, Büro und Tastatur (schwarz)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 34,
+      "rank": 23,
+      "change": 0
+    },
+    {
+      "brand": "Uwant D500 Nass /Trockensauger, Geruchskontrolle im Abwasserbehälter, 180° flachliegende Saugwippe, 17.000 Pa Saugleistung, leise Heißtrocknung bis 65 °C, selbstreinigend, freie Faserführung, IPX6 wasserdicht für Böden",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 9,
+      "rank": 78,
+      "change": 0
+    },
+    {
+      "brand": "uwant D500 Wet Dry Vacuum Cleaner, Intelligent Stain Detection, 180° Reclining Design, Edge Cleaning 2 mm, Push in Base Station, Electrolytic Water, 17000Pa Suction Power",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 9,
+      "rank": 79,
+      "change": 0
+    },
+    {
+      "brand": "Shark PowerDetect Clean & Empty Akku-Staubsauger für Tierhaare",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 3,
+      "rank": 178,
+      "change": 0
+    },
+    {
+      "brand": "Yanhama Nass /Trocken Bodenreiniger, 180° flaches Design, Anti Verhedderungsmechanismus; erzeugt beim Start elektrolysiertes Wasser und reinigt bis an die Ränder, ideal für harte Böden, ohne blinde Stellen",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 11,
+      "rank": 67,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Waschsauger 600W, tragbarer Teppich- und Polsterreiniger mit Sprüh- und Saugfunktion, 15.000 Pa Saugkraft, für Sofa, Teppich, Autositze und Matratzen, entfernt hartnäckige Flecken, Textilreinigungsmaschine inkl. 3 Aufsätze",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 21,
+      "rank": 39,
+      "change": 0
+    },
+    {
+      "brand": "dreame H12s Nass Trockenstaubsauger, intelligente Bodenreinigung, kabelloser Staubsauger und Wischer für Hartböden, Kantenreinigung mit Schmutzerkennung",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 9,
+      "rank": 80,
+      "change": 0
+    },
+    {
+      "brand": "Dreame D20 Pro Plus Staubsauger Roboter, 13.000 Pa Saugkraft, DuoBrush für Tierhaare, Corner Clean, Selbstreinigung, Hindernis mit LDS-Navigation & Laser, saugt und wischt, Hartböden & Teppiche",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 6,
+      "rank": 124,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Akku Stabstaubsauger, 45.000 Pa Saugkraft, Anti Haarverwicklungsbürste mit LED Licht, 90° klappbares Metallrohr, 6 fach Filtersystem, freistehend, 55 Min Laufzeit, 500 ml Staubbehälter, für Tierhaare, Hartböden & Teppiche",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 14,
+      "rank": 56,
+      "change": 0
+    },
+    {
+      "brand": "Wasch-Sauger Waschsauger Teppichreiniger Polsterreiniger, Nasssauger Sofa Reiniger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 19,
+      "rank": 43,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Slim V10 APEX kabelloser Auto-Staubsauger, 4-in-1 tragbarer Mini-Handstaubsauger, 19 kPa Saugkraft, verbessertes intelligentes digitales Display, 2 Saugleistungsmodi",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 11,
+      "rank": 68,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12s Nass Trockenstaubsauger, intelligente Bodenreinigung, kabelloser Staubsauger und Wischer für Hartböden, Kantenreinigung mit Schmutzerkennung",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 7,
+      "rank": 106,
+      "change": 0
+    },
+    {
+      "brand": "Shark PowerDetect Speed Pet Pro Clean & Empty Akku-Staubsauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 2,
+      "rank": 203,
+      "change": 0
+    },
+    {
+      "brand": "V16 Kabelloser Handstaubsauger für das Auto, leistungsstarker tragbarer 6-in-1-Staubsauger mit intelligentem Display und mehreren Reinigungszubehörteilen für Auto, Zuhause, Büro und Haustiere, tragbarer kabelloser Hochleistungsstaubsauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 35,
+      "rank": 21,
+      "change": 0
+    },
+    {
+      "brand": "Gebraucht JONR ED12 Lite Nass Trockensauger,1mm Kantenreinigungs,Selbstreinigung,8kPa",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 7,
+      "rank": 107,
+      "change": 0
+    },
+    {
+      "brand": "JONR-Akku ED12 Nass- und Trockenstaubsauger, kabelloser Nass- und Trockensauger, Mopp, Kantenreinigungsbürste, 6 mm, selbstreinigend, 850 ml Wassertank, Anti-Verwirrungshaar für Hartböden, Tierhaare",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 4,
+      "rank": 157,
+      "change": 0
+    },
+    {
+      "brand": "dreame T16 Pro Steam Nass- & Trockensauger, 200 °C Dampf Wischen m. 90 °C Wasser, niedrige Stellen bis 9,85 cm, 30.000 Pa, Bürstenre. m. Dampf+Heißwasser, App-Steuerung",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 1,
+      "rank": 224,
+      "change": 0
+    },
+    {
+      "brand": "MOVA E40 Ultra Saugroboter, Selbstreinigende Station & Ausfahrbarer Mopp 19.000 Pa, Moppwässche & Heißlufttrocknung,Anti Verwicklungsbürste, Kartierung",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 2,
+      "rank": 204,
+      "change": 0
+    },
+    {
+      "brand": "Dreame N20 tragbarer Dampf Bodenfleckenreiniger, 17.000 Pa Saugkraft entfernt tiefsitzenden Schmutz, hygienische Tiefenreinigung mit 100 °C Dampfkraft, Reinigung für verschiedene Stoffarten, Dampfspezifische Aufsätze",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 3,
+      "rank": 179,
+      "change": 0
+    },
+    {
+      "brand": "Shark PowerLite Akku-Staubsauger",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 2,
+      "rank": 205,
+      "change": 0
+    },
+    {
+      "brand": "Fensterputzroboter mit automatischer Ultraschall-Sprühfunktion, 5600Pa extra starke Saugkraft & intelligente Navigation – Automatischer Fenstersauger mit Fernbedienung, Fallschutz & 10 Mikrofaser-Pads für Fenster, Fliesen und glatte Oberflächen",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "德国",
+      "platform": "",
+      "sales": 7,
+      "rank": 108,
+      "change": 0
+    },
+    {
+      "brand": "Dreame G12 Pro Flex T aspirapolvere lavapavimenti, potente aspirazione di 23.000 Pa netti. superfici asciutte/umide, ultraleggero 4,1 kg, sottile 9,9 cm, netti. due bordi, zero sovrapposizioni., asciugatura ad aria calda 95 °C",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 65,
+      "rank": 3,
+      "change": 0
+    },
+    {
+      "brand": "DREAME H12 Pro FlexReach Aspirapolvere Lavapavimenti, Design Piatto a 180°, 5 Min di Asciugatura, Aspirazione da 18.000 Pa, Pulizia a caldo a 90 °C, 50 Min di pulizia continua",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 25,
+      "rank": 32,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro Ultra Aspirapolvere Wet / Dry con funzione autopulente, rilevamento sporco, display a LED, autonomia 35 minuti, capacità 900 ml, nero",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 9,
+      "rank": 81,
+      "change": 0
+    },
+    {
+      "brand": "dreame G10 Pro aspirapolvere lavapavimenti, Aspirapolvere Wet Dry, Mop Aspirapolvere All in One con autopulente automatica, Macchina per la pulizia del pavimento duro, 35 minuti di autonomia, Pulizia dei bordi, Mop Aspirapolvere semovente",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 9,
+      "rank": 82,
+      "change": 0
+    },
+    {
+      "brand": "dreame H12s Aspirapolvere Lavapavimenti, Aspirapolvere Wet and Dry, Pulizia Intelligente del Pavimento, Aspirapolvere Wireless e Tergicristallo per Pavimenti Duri, Pulizia dei Bordi con Rilevamento dello Sporco",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 5,
+      "rank": 137,
+      "change": 0
+    },
+    {
+      "brand": "Robot aspirapolvere Dreame D20 Pro Plus, potenza di aspirazione 13.000 Pa, DuoBrush per peli di animali domestici, pulizia degli angoli, rimozione automatica, ostacolo con navigazione LDS & laser, aspirapolvere e straccio, pavimenti duri e tappeti",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 5,
+      "rank": 138,
+      "change": 0
+    },
+    {
+      "brand": "dreame H12s aspirapolvere lavapavimenti, Aspirapolvere Wet and Dry, Pulizia Intelligente del Pavimento, Aspirapolvere Wireless e Tergicristallo per Pavimenti Duri, Pulizia dei Bordi con Rilevamento dello Sporco",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 7,
+      "rank": 109,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H15 Pro Aspirapolvere Bagnato e Asciutto, GapFree AI DescendReach Robot Braccio, Triple Edge Cover, 21kPa Potenza di Aspirazione, 0 Groviglio, 100 ° C Spazzola Lavaggio, 5min 90 ° C Asciugatura, 180 ° Lie Flat",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 3,
+      "rank": 180,
+      "change": 0
+    },
+    {
+      "brand": "X7 Aspirapolvere senza Fili Potente, Scopa Elettrica senza Filo con Autoportante, versione mano e verticale, leggero, spazzola anti-nodi, autoportante, base di ricarica da parete, filtrazione a 5 livelli, ultra silenzioso, per pavimenti,",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 9,
+      "rank": 83,
+      "change": 0
+    },
+    {
+      "brand": "Lefant M330S – Robot 3 in 1 con navigazione dToF, mappatura intelligente e 5000Pa di potenza per una pulizia completa e silenziosa",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 5,
+      "rank": 139,
+      "change": 0
+    },
+    {
+      "brand": "K5 1700 W 25 kPa pulitore a vapore per tappeti, 5 livelli di temperatura, 3 modalità di aspirazione, dispositivo portatile con nebulizzazione, serbatoi grandi e display touch led per divani, materassi e macchie degli animali",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 5,
+      "rank": 140,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Slim V8 Apex aspirapolvere per auto, mini aspirapolvere portatile senza fili 4 in 1 con potenza di aspirazione di 19 000 Pa, ricarica USB‑C, 2 modalità di aspirazione, aspirapolvere a mano per auto, ufficio e tastiera (nero)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 9,
+      "rank": 84,
+      "change": 0
+    },
+    {
+      "brand": "Dreame Robot aspirapolvere L50 Ultra AE, lavaggio con panno autopulente a 100 °C, 28000 Pa | pulizia profonda di angoli e bordi, stazione di ricarica intelligente multifunzione PowerDock, navigazione LDS ed evitamento degli ostacoli tramite laser",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 225,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H14 AE aspirapolvere bagnato/asciutto, 18kPa,180°Piatto,Spazzola a doppia bordatura, 60 °C Spazzolamento e asciugatura,2 direzioni Rosso, Trappola per sporcizia,App,LED,Tappeto＆pavimento",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 2,
+      "rank": 206,
+      "change": 0
+    },
+    {
+      "brand": "DREAME L10s Ultra Gen 3 Kit Robot Aspirapolvere e Lavapavimenti, Aspirazione da 25.000 Pa, Spazzola Laterale e Moci Estensibili,Stazione di Pulizia Automatica All-in-One,Controllo Vocale e tramite App",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 226,
+      "change": 0
+    },
+    {
+      "brand": "Aspirapolvere Portatile Cordless per Auto, Potente Aspirapolvere Portatile 6 in 1 con Display Intelligente e Accessori Multi Pulizia per Auto, Casa, Ufficio, Animale Domestico Aspirapolvere Portatile Cordless ad Alta Potenza",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 15,
+      "rank": 51,
+      "change": 0
+    },
+    {
+      "brand": "Aspirapolvere Portatile per Materassi 10kPa – Anti-Acaro, UV & Filtro HEPA, Rimozione Polvere Profonda per Letti, Divani e Tessuti – Cordless 1500mAh, 3 Livelli di Aspirazione",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 9,
+      "rank": 85,
+      "change": 0
+    },
+    {
+      "brand": "DREAME-L40 Ultra AE Aspirapolvere robot con funzione mocio, potenza di aspirazione di 19.000 Pa, molte spazzole e mocio flessibile, sporco bagnato e asciutto, il dock all-in-1 svuota la polvere",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 227,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN V28 aspirapolvere a batteria 45000Pa/500W/50min, capacità contenitore 1,6 L, senza fili, super silenzioso con display intelligente, con modalità automatica e spazzola anti-nodi per tappeti, pavimenti duri e peli di animali",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 3,
+      "rank": 181,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 Lite/ED12 aspirapolvere a umido e a secco senza fili con pulizia dei bordi a 1 mm, sistema anti nodi per pavimenti duri e peli di animali",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 2,
+      "rank": 207,
+      "change": 0
+    },
+    {
+      "brand": "Pulitore portatile per tappeti e tessuti con 3 testine, per divani e animali domestici, pulizia profonda per tappeti, auto e ambienti familiari",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 4,
+      "rank": 158,
+      "change": 0
+    },
+    {
+      "brand": "Redroad pulitore per tappeti 1800 W, aspirapolvere lavabile con potenza di aspirazione di 32.000 Pa per divano, tappeto, auto e materasso; aspiratore a umido/asciutto con sistema a doppio serbatoio, pulizia profonda, rimozione delle macchie, autopulizia",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 2,
+      "rank": 208,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H15S Aspirapolvere bagnato e asciutto, pulizia a triplo bordo, braccio robotico IA, potenza di aspirazione 21000Pa, senza groviglio, asciugatura silenziosa a 90°C, design piatto 180°",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 228,
+      "change": 0
+    },
+    {
+      "brand": "Aspirapolvere Cordless DREAME-Z30, Aspirapolvere Smart Stick per la Pulizia Multi-superficie, Aspirazione 310AW con Doppie Spazzole, Strumento di Deshedding per Animali Domestici, Lunga Durata, Ideale per Pavimenti Duri",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 229,
+      "change": 0
+    },
+    {
+      "brand": "FixtFixer X7 aspirapolvere a batteria 400 W/30 kPa, aspirapolvere senza fili 6-in-1, contenitore della polvere da 1,1 L per peli di animali domestici/tappeti/pavimenti duri/auto",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 3,
+      "rank": 182,
+      "change": 0
+    },
+    {
+      "brand": "Uwant D500 aspirapolvere asciutto e umido con controllo degli odori, potenza 17.000 Pa, asciugatura a 65 °C, autopulente, impermeabile IPX6, pulizia completa 3 in 1",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 230,
+      "change": 0
+    },
+    {
+      "brand": "Pulitore a vapore portatile multi‑superficie Phueut ad alta pressione con 11 pezzi di ricambio, pulitore a vapore multiuso per uso domestico, cucina e auto",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 6,
+      "rank": 125,
+      "change": 0
+    },
+    {
+      "brand": "uwant D500 Aspirapolvere a secco e bagnato, rilevamento intelligente delle macchie, design reclinabile a 180°, pulizia dei bordi a 2 mm, base di ricarica a inserimento, acqua elettrolitica, potenza di aspirazione 17000Pa",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 231,
+      "change": 0
+    },
+    {
+      "brand": "Scopa Elettrica con Filo Potente 2 in 1, Aspirapolvere Verticale con Filtro HEPA e Aspirabriciole Integrato, 600W 15kPa, Leggera per Peli Animali, Casa e Auto, con Accessori",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 7,
+      "rank": 110,
+      "change": 0
+    },
+    {
+      "brand": "Hearten T8 aspirapolvere umido/secco, aspirapolvere senza fili con batteria, pulizia dei bordi fino a 1 mm, sistema anti-intrecciamento, detergente per pavimenti leggero per pavimenti duri, display LED, peli degli animali domestici",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "意大利",
+      "platform": "",
+      "sales": 1,
+      "rank": 232,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro FlexReach Aspirateur et laveur, portée plate à 180°, séchage en 5 minutes, puissance d’aspiration de 18 000 Pa, lavage à 90 °C, nettoie les deux côtés, jusqu’à 50 minutes de temps de nettoyage",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 120,
+      "rank": 1,
+      "change": 0
+    },
+    {
+      "brand": "Uwant D500 aspirateur à eau/air, contrôle des odeurs dans le réservoir d’égouttage, balai de lavage inclinable à 180°, puissance d’aspiration de 17 kPa, séchage à air chaud jusqu’à 65 °C, auto nettoyant, conduit de fibre libre, étanchéité IPX6 pour sols",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 33,
+      "rank": 25,
+      "change": 0
+    },
+    {
+      "brand": "DREAME L10s Ultra Gen 2 Robot Aspirateur Laveur 10 000 Pa, Technologie MopExtend RoboSwing, Base Entièrement Automatique, Mode Animaux, 32 réglages de niveau d'eau, Système de lavage des sols DuoScrub, TikTokShopBlackFriday",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 20,
+      "rank": 40,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12 Pro Ultra Aspirateur Eau et poussière, Lavage 60 °C, Séchage 30 Min, Nettoyage Auto Double Rotation avec Racleur Résistant, Aspiration 16 kPa, Brosse 2 Bords, Détection Intelligents",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 17,
+      "rank": 47,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN V28 aspirateur sans fil 45 000 Pa / 500 W / 50 min, capacité de 1,6 L, super silencieux avec écran intelligent, mode automatique et brosse anti‑emmêlement pour tapis, sols durs et poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 23,
+      "rank": 35,
+      "change": 0
+    },
+    {
+      "brand": "Dreame T16 Pro Heat aspirateur laveur de sols avec chauffage, aspiration jusqu’à 30 000 Pa, eau chaude propre à 90°C, rinçage thermique : la graisse disparaît en quelques passages",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 5,
+      "rank": 141,
+      "change": 0
+    },
+    {
+      "brand": "dreame G12 Pro Flex T Aspirateur Laveur, Aspiration puissante de 23 000 Pa nett. surfaces sèches/humides, ultra léger 4,1 kg, fin 9,9 cm, nett. deux bords, zéro enchev., séch. air chaud 95 °C",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 13,
+      "rank": 58,
+      "change": 0
+    },
+    {
+      "brand": "dreame L40 Ultra AE Robot Aspirateur et Serpillière Autonome, 19 000 Pa Aspiration Puissante, Nettoyage Sec-Humide, Dock Tout-en-1 Vidange Automatique, 2 Brosses Incluses, TikTokShopBlackFriday",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 6,
+      "rank": 126,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN F01 aspirateur sans fil, 40 000 Pa / 500 W / 50 minutes d’autonomie avec écran LED HD, nettoyage en profondeur, brosse anti-emmêlement pour tapis, sols durs et poils d’animaux.",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 23,
+      "rank": 36,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 Lite aspirateur eau et poussière aspirateur sans fil avec nettoyage des bords à 1 mm système anti nouage pour sols durs et poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 12,
+      "rank": 65,
+      "change": 0
+    },
+    {
+      "brand": "Dreame G10 Pro aspirateur sec et humide, vadrouille tout en un avec autonettoyage automatique, Machine de nettoyage de sol pour sols durs, autonomie de 35 minutes, nettoyage des bords, vadrouille automotrice",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 13,
+      "rank": 59,
+      "change": 0
+    },
+    {
+      "brand": "dreame L10s Ultra Gen 3 Kit Robot Aspirateur Laveur, 25000Pa, Brosse Latérale Rétractable à Levage, Système AceClean DryBoard, Auto-Nettoyage Serpillière, Séchage à l’Air Chaud, Contrôle Vocal & App",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 5,
+      "rank": 142,
+      "change": 0
+    },
+    {
+      "brand": "dreame D20 Pro Plus Robot Aspirateur 2-en-1, 13 000 Pa, Double Brosse, Auto-Vidage, Laser Navigation, Capteur Distance, Poils d’Animaux, Coins, Sols Durs & Tapis, Batterie 5200 mAh",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 9,
+      "rank": 86,
+      "change": 0
+    },
+    {
+      "brand": "Roborock Q7 M5 Robot Aspirateur et Laveur, 10 000 Pa HyperForce, Système Anti-Emmêlement Double, Navigation LiDAR Précis, 150 min d'Autonomie, Contrôle via l'Application, Idéal Tapis et Poils d'Animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 11,
+      "rank": 69,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Slim V8 Apex aspirateur pour voiture, mini aspirateur portable sans fil 4 en 1 avec puissance d'aspiration de 19 000 Pa, charge USB‑C, 2 modes d'aspiration, aspirateur à main pour voiture, bureau et clavier (noir)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 28,
+      "rank": 28,
+      "change": 0
+    },
+    {
+      "brand": "Roborock Q10 PF+ Robot Aspirateur Laveur, 10 000 Pa d'aspiration, Système Dual Anti-Tangle, Brosse JawScrapers, Évitement intelligent des obstacles, Idéal pour poils d'animaux et moquettes, Noir",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 6,
+      "rank": 127,
+      "change": 0
+    },
+    {
+      "brand": "dreame H15 Pro Aspirateur Laveur, Bras robotisé AI DescendReach, Triple arête, 21 kPa, antinœuds, Lavage Brosse immersif 100°C, séchage 5 Min 90°C, portée à Plat 180°, contrôle par Application, TikTokShopBlackFriday",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 4,
+      "rank": 159,
+      "change": 0
+    },
+    {
+      "brand": "DREAME H15 Pro Heat Aspirateur Laveur, Nettoyage des sols à 85 °C, bras robotisé IA GapFree, capteur RVB intelligent, 22 kPa, 0 nœuds, lavage brosse à 100°C, séchage en 5 min à 90°C,contrôle par appli, TikTokShopBlackFriday",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 3,
+      "rank": 183,
+      "change": 0
+    },
+    {
+      "brand": "Aspirateur balai sans fil Shark PowerDetect Speed Luxe Clean & Empty",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 3,
+      "rank": 184,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H14 Pro Aspirateur Laveur Sec Et Humide, Design Plat à 180°, Nettoyage de la Brosse à 60 °C, Séchage en 5min, Distribution Automatique de la Solution, Contrôle par Application, 18 kPa, TikTokShopBlackFriday",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 4,
+      "rank": 160,
+      "change": 0
+    },
+    {
+      "brand": "Dreame H12s aspirateur humide et sec , nettoyage Intelligent des sols, aspirateur et essuie glace sans fil pour sols durs, nettoyage des bords avec détection de saleté",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 5,
+      "rank": 143,
+      "change": 0
+    },
+    {
+      "brand": "Aspirateur à main sans fil pour voiture, puissant, Portable 6 en 1, avec affichage intelligent et accessoires de nettoyage multiples, pour voiture, maison, bureau, animaux de compagnie",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 38,
+      "rank": 16,
+      "change": 0
+    },
+    {
+      "brand": "JONR Aspirateur eau et poussière sans fil ED12, balai à franges, brosse de nettoyage des bords, 6 mm, auto-nettoyant, réservoir d’eau de 850 ml, anti-enchevêtrement pour sols durs, poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 6,
+      "rank": 128,
+      "change": 0
+    },
+    {
+      "brand": "dreame R10 Aspirateur Balai sans Fil, Aspiration puissante de 120AW, Autonomie de 60 Min, Filtration avancée, Brosse Multi-Surfaces avec éclairage LED Idéal pour ménage, Poils d'animaux et Tapis",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 7,
+      "rank": 111,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 aspirateur humide et sec, nettoyeur de sol sans fil autonettoyant, aspirateur vadrouille léger pour sols durs, poils d'animaux, restes de nourriture nettoyage complet sans sortie",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 5,
+      "rank": 144,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN Aspirateur pour matelas, aspirateur de lit 16 kPa avec lumière UV-C à 253,7 nm, chaleur jusqu’à 140 °F, filtre HEPA et technologie ultrasonique, aspirateurs portatifs polyvalents pour lit, canapé et lit bébé (avec câble, 500 W)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 13,
+      "rank": 60,
+      "change": 0
+    },
+    {
+      "brand": "Machine de nettoyage des tissus Noir et blanc, peut nettoyer en profondeur les taches sur les tapis, les sièges de voiture, les animaux domestiques, les escaliers, les canapés, etc., adapté aux voitures/détails de voiture",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 11,
+      "rank": 70,
+      "change": 0
+    },
+    {
+      "brand": "Dreame Matrix 10 Ultra, robot aspirateur avec fonction de lavage, Matrix 10 Ultra avec sac, remplacement du mop, trois nettoyants, franchit les obstacles, 30 000 Pa",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 1,
+      "rank": 233,
+      "change": 0
+    },
+    {
+      "brand": "JONR aspirateur sec et humide ED12 Lite, sans fil avec batterie, nettoyage des bords de 1 mm, système Anti enchevêtrement, nettoyeur de sol léger pour sols durs, poils d'animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 4,
+      "rank": 161,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Aspirateur balai sans fil 500 W / 45 000 Pa, jusqu’à 50 min d’autonomie, écran LED intelligent, design autoportant et pliable, brosse anti-emmêlement pour tapis, sols durs et poils d’animaux",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "法国",
+      "platform": "",
+      "sales": 6,
+      "rank": 129,
+      "change": 0
+    },
+    {
+      "brand": "PrettyCare aspiradora inalámbrica 25KPa, limpieza de suelos, 45 minutos de autonomía, se mantiene de pie por sí sola, tubo flexible de 180°, ideal para el hogar, el pelo de mascotas y todo tipo de suelos 23",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 46,
+      "rank": 12,
+      "change": 0
+    },
+    {
+      "brand": "Dreame Aspiradora en seco y húmedo H12 Pro, 300W, Pantalla LED, Autonomía hasta 35min, Tanque 900ml, Cepillo de limpieza de doble filo, Base de Autolimpieza y Secado en Caliente",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 16,
+      "rank": 48,
+      "change": 0
+    },
+    {
+      "brand": "Aspiradora inalámbrica de mano para coche, aspirador portátil 6 en 1 potente, con pantalla con inteligente y accesorios de limpieza múltiple para coche, hogar, oficina, mascota",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 57,
+      "rank": 5,
+      "change": 0
+    },
+    {
+      "brand": "JONR H2 PRO aspiradora para líquidos y sólidos, 20000 Pa, diseño innovador sin olores | autolimpieza con ahorro de energía PTC, depósito de agua de 1500 ml, plano a 180°, adecuado para cocina, dormitorio y sala de estar",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 6,
+      "rank": 130,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN aspiradora sin cable, 250 W/25000 Pa, aspiradora de mano inalámbrica de 45 minutos, con pantalla táctil LED, diseño anti-enredos, ajustable en posición vertical, adecuada para alfombras/suelos duros/pelos de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 10,
+      "rank": 74,
+      "change": 0
+    },
+    {
+      "brand": "Carpet Cleaner Machine, Portable Upholstery Spot Cleaner with Deep Spray Cleaning & Strong Suction, Stain Remover for Carpet, Sofa, Car Seats & Stairs, 220-240V UK Plug, Hose Self-Cleaning",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 11,
+      "rank": 71,
+      "change": 0
+    },
+    {
+      "brand": "530W / 48 kPa / 70 minutos, aspiradora sin cable, 3 niveles de potencia, ideal para la limpieza del hogar, diseño autónomo, pantalla táctil inteligente, perfecta para pelos de mascotas, alfombras y suelos duros 01",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 162,
+      "change": 0
+    },
+    {
+      "brand": "YADIMI, Aspirador de tapicerías, Depósito extraíble de 1,7L de agua limpia y 1L de agua residual, Limpieza rápida de derrames y manchas, Suciedad de Mascotas, Potencia de 530W",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 10,
+      "rank": 75,
+      "change": 0
+    },
+    {
+      "brand": "JONR ED12 aspiradora húmeda y en seco autolimpiable inalámbrica limpiador de suelos mopa ligera para suelos duros pelo de mascotas restos de comida limpieza integral sin salida",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 163,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN F01 aspiradora sin cable, 40000 Pa/500 W/50 minutos, con pantalla LED HD, limpieza profunda y cepillo anti-enredos para alfombras, suelos duros y pelo de mascotas.",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 7,
+      "rank": 112,
+      "change": 0
+    },
+    {
+      "brand": "JONR aspiradora en seco y húmedo ED12 Lite, aspiradora inalámbrica con batería con , limpieza de bordes de 1 mm, sistema antienredos, limpiador de suelos ligero para suelos duros, pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 164,
+      "change": 0
+    },
+    {
+      "brand": "V16 500W 75 kPa aspiradora sin cable con pantalla táctil, modo automático, sensor de polvo infrarrojo, filtración HEPA de 6 niveles, autonomía de 60 min, batería extraíble, pantalla LED para suelos duros, alfombras y pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 3,
+      "rank": 185,
+      "change": 0
+    },
+    {
+      "brand": "HAUSHOF StainZapper aspirador lavador, limpiador de alfombras de 400W, limpiador de moquetas con doble depósito de 1,1L+0,5L, manguera de 1,2m, 85dB, 2 boquillas para coche/cojines/cortinas/mascotas, accesorios incluidos，Incluye solución de limpieza",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 5,
+      "rank": 145,
+      "change": 0
+    },
+    {
+      "brand": "JONR Aspiradora húmeda y en seco sin cable ED12, con fregona, cepillo de limpieza de bordes, 6 mm, autolimpiable, depósito de agua de 850 ml, anti-enredos para suelos duros y pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 2,
+      "rank": 209,
+      "change": 0
+    },
+    {
+      "brand": "Belibuy-aspiradora inalámbrica V8 max para coche, miniaspirador portátil 4 en 1 para coche y hogar, potencia de succión de 9000pa, carga tipo C, 2 modos de aspiración, aspiradora de mano para coche, escritorio, teclado (negro)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 13,
+      "rank": 61,
+      "change": 0
+    },
+    {
+      "brand": "Limpiador a vapor portátil multiusos con presión Phueut, con 11 pzas de repuesto, para uso doméstico, cocina y coche",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 9,
+      "rank": 87,
+      "change": 0
+    },
+    {
+      "brand": "FixtFixer X7 aspiradora sin cable de 400W/30 kPa, aspiradora inalámbrica 6 en 1, aspiradora sin Cable Potente hasta 55 Mins, con Smart Screen y Cepillo Antienredos",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 165,
+      "change": 0
+    },
+    {
+      "brand": "Limpiador Portátil de Alfomy Tapicería con 3 Cabezales para Sofá y Mascotas Limpieza Profunda para Alfombras Coches y Familiares",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 4,
+      "rank": 166,
+      "change": 0
+    },
+    {
+      "brand": "Aigostar Aspirador con Cable 2 en 1, 600 W, Aspirador Vertical, 13 kPa, Capacidad 1 L, Ligero, Ideal para Hogar, Sofá y Limpieza de Pelos de Mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 7,
+      "rank": 113,
+      "change": 0
+    },
+    {
+      "brand": "Aspiradora para automóvil portátil inalámbrica de 9000 Pa, mini aspiradora de mano con pantalla LCD y múltiples boquillas, alta potencia para uso en seco y húmedo, apta para automóvil, hogar, oficina, mascotas, diseño compacto y portátil (azul).",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 9,
+      "rank": 88,
+      "change": 0
+    },
+    {
+      "brand": "Aspiradora sin cable Shark PowerLite BU1621EU",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 234,
+      "change": 0
+    },
+    {
+      "brand": "UWANT D500 Aspiradora en Seco y Húmedo, 17.000 Pa de Succión, Autolimpieza, Secado con Aire Caliente hasta 65 °C, Control de Olores, Cabezal 180° y Resistencia al Agua IPX6",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 235,
+      "change": 0
+    },
+    {
+      "brand": "Fanttik Slim V8 Apex aspiradora para coche, mini aspiradora portátil sin cable 4 en 1 con potencia de succión de 19 000 Pa, carga USB‑C, 2 modos de succión, aspiradora de mano para coche, oficina y teclado (negro)",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 3,
+      "rank": 186,
+      "change": 0
+    },
+    {
+      "brand": "Limpiador puntual de 500 W, 12 kPa – Limpiador manual para alfombras, sofás y cortinas con función integrada de pulverización y aspiración – Dispositivo de limpieza doméstica con 3 cabezales de limpieza",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 3,
+      "rank": 187,
+      "change": 0
+    },
+    {
+      "brand": "X7 aspiradora sin cable de batería, 400W Aspirador sin Cable, vertical, cepillo anti-enredos, autoportante, base de carga en pared, filtración de 5 capas, ultrarrápida, para suelos y alfombras, apta para pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 2,
+      "rank": 210,
+      "change": 0
+    },
+    {
+      "brand": "Lubluelu Aspiradora Antiacaros 15.000 Pa con Ultrasonido y Aire Caliente 55°C, Aspirador de Colchón con Filtro HEPA de Metal, Elimina el 99,9% de Ácaros y Alérgenos, para Cama, Sofá y Almohadas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 2,
+      "rank": 211,
+      "change": 0
+    },
+    {
+      "brand": "CIRCLIO aspiradora sin cable de 600 W con batería, cepillo para colchones contra el polvo y los ácaros, tiempo de funcionamiento de 75 min, pantalla LED, cepillo anti-enredos para una limpieza profunda del hogar",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 236,
+      "change": 0
+    },
+    {
+      "brand": "Lefant M330S Robot Aspirador y Fregasuelos 3 en 1, Succión 5000Pa para Limpieza Diaria, Navegación dToF con Mapeo Preciso, 150min Autonomía, WiFi/Alexa 2.4G y 5G, Adecuado para Pelo de Mascotas y Limpieza Ligera de Alfombras",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 237,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN R9 50 000 Pa/600 W/55 minutos: aspiradora inalámbrica con iluminación ambiental, que se mantiene en pie automáticamente, con ajuste automático de la potencia de succión y pantalla LED, apta para alfombras, suelos duros y pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 238,
+      "change": 0
+    },
+    {
+      "brand": "FYRAEN V28 Pro 45000Pa/550W/55min aspiradora sin cable, aspiradora con batería con ajuste automático de succión, cepillo anti-enredos y pantalla LED para alfombras, suelos duros y pelo de mascotas",
+      "category": "家电 > 生活家电 > 吸尘器及扫地机器人",
+      "model": "",
+      "country": "西班牙",
+      "platform": "",
+      "sales": 1,
+      "rank": 239,
+      "change": 0
+    }
   ],
   "materials": [
-    { "name": "VC-X1 开箱测评 09A", "platform": "TikTok Shop", "type": "短视频", "publishedAt": "2026-09-18", "views": 486000, "ctr": 3.9, "revenue": 82400, "status": "增长" },
-    { "name": "HC-PRO 达人口播 12B", "platform": "TikTok Shop", "type": "达人视频", "publishedAt": "2026-09-17", "views": 328000, "ctr": 4.4, "revenue": 71600, "status": "增长" },
-    { "name": "SM-A8 使用场景图组", "platform": "Amazon", "type": "图片", "publishedAt": "2026-09-16", "views": 174000, "ctr": 2.8, "revenue": 56900, "status": "稳定" },
-    { "name": "KT-M2 三步教程", "platform": "独立站", "type": "短视频", "publishedAt": "2026-09-15", "views": 96000, "ctr": 3.2, "revenue": 28400, "status": "稳定" },
-    { "name": "VC-L2 对比评测", "platform": "Amazon", "type": "A+ 页面", "publishedAt": "2026-09-13", "views": 126000, "ctr": 2.1, "revenue": 31100, "status": "待优化" },
-    { "name": "HS-S3 收纳改造", "platform": "独立站", "type": "图文", "publishedAt": "2026-09-11", "views": 78000, "ctr": 1.9, "revenue": 16700, "status": "待优化" }
+    {
+      "name": "VC-X1 开箱测评 09A",
+      "platform": "TikTok Shop",
+      "type": "短视频",
+      "publishedAt": "2026-09-18",
+      "views": 486000,
+      "ctr": 3.9,
+      "revenue": 82400,
+      "status": "增长"
+    },
+    {
+      "name": "HC-PRO 达人口播 12B",
+      "platform": "TikTok Shop",
+      "type": "达人视频",
+      "publishedAt": "2026-09-17",
+      "views": 328000,
+      "ctr": 4.4,
+      "revenue": 71600,
+      "status": "增长"
+    },
+    {
+      "name": "SM-A8 使用场景图组",
+      "platform": "Amazon",
+      "type": "图片",
+      "publishedAt": "2026-09-16",
+      "views": 174000,
+      "ctr": 2.8,
+      "revenue": 56900,
+      "status": "稳定"
+    },
+    {
+      "name": "KT-M2 三步教程",
+      "platform": "独立站",
+      "type": "短视频",
+      "publishedAt": "2026-09-15",
+      "views": 96000,
+      "ctr": 3.2,
+      "revenue": 28400,
+      "status": "稳定"
+    },
+    {
+      "name": "VC-L2 对比评测",
+      "platform": "Amazon",
+      "type": "A+ 页面",
+      "publishedAt": "2026-09-13",
+      "views": 126000,
+      "ctr": 2.1,
+      "revenue": 31100,
+      "status": "待优化"
+    },
+    {
+      "name": "HS-S3 收纳改造",
+      "platform": "独立站",
+      "type": "图文",
+      "publishedAt": "2026-09-11",
+      "views": 78000,
+      "ctr": 1.9,
+      "revenue": 16700,
+      "status": "待优化"
+    }
   ],
   "documents": [
-    { "name": "2026-09 欧洲渠道经营周报.xlsx", "type": "Excel", "owner": "运营部", "updatedAt": "2026-09-20 16:20" },
-    { "name": "Q4 新品上市节奏.pdf", "type": "PDF", "owner": "产品部", "updatedAt": "2026-09-19 11:40" },
-    { "name": "TikTok 达人合作名单.csv", "type": "CSV", "owner": "市场部", "updatedAt": "2026-09-18 18:05" },
-    { "name": "海外仓补货计划.xlsx", "type": "Excel", "owner": "供应链", "updatedAt": "2026-09-18 09:30" }
+    {
+      "name": "2026-09 欧洲渠道经营周报.xlsx",
+      "type": "Excel",
+      "owner": "运营部",
+      "updatedAt": "2026-09-20 16:20"
+    },
+    {
+      "name": "Q4 新品上市节奏.pdf",
+      "type": "PDF",
+      "owner": "产品部",
+      "updatedAt": "2026-09-19 11:40"
+    },
+    {
+      "name": "TikTok 达人合作名单.csv",
+      "type": "CSV",
+      "owner": "市场部",
+      "updatedAt": "2026-09-18 18:05"
+    },
+    {
+      "name": "海外仓补货计划.xlsx",
+      "type": "Excel",
+      "owner": "供应链",
+      "updatedAt": "2026-09-18 09:30"
+    }
   ],
   "inventory": [
-    { "sku": "VC-X1-US", "model": "VC-X1", "country": "美国", "warehouse": "美西仓", "available": 486, "days": 9, "status": "需补货", "suggested": 800 },
-    { "sku": "HC-PRO-US", "model": "HC-PRO", "country": "美国", "warehouse": "美东仓", "available": 920, "days": 21, "status": "正常", "suggested": 0 },
-    { "sku": "SM-A8-DE", "model": "SM-A8", "country": "德国", "warehouse": "德国仓", "available": 312, "days": 13, "status": "关注", "suggested": 420 },
-    { "sku": "KT-M2-UK", "model": "KT-M2", "country": "英国", "warehouse": "英国仓", "available": 678, "days": 26, "status": "正常", "suggested": 0 },
-    { "sku": "HS-S3-FR", "model": "HS-S3", "country": "法国", "warehouse": "法国仓", "available": 188, "days": 8, "status": "需补货", "suggested": 360 },
-    { "sku": "VC-L2-ES", "model": "VC-L2", "country": "西班牙", "warehouse": "西班牙仓", "available": 440, "days": 18, "status": "正常", "suggested": 0 },
-    { "sku": "HC-LITE-UK", "model": "HC-LITE", "country": "英国", "warehouse": "英国仓", "available": 264, "days": 12, "status": "关注", "suggested": 300 }
+    {
+      "sku": "VC-X1-US",
+      "model": "VC-X1",
+      "country": "美国",
+      "warehouse": "美西仓",
+      "available": 486,
+      "days": 9,
+      "status": "需补货",
+      "suggested": 800
+    },
+    {
+      "sku": "HC-PRO-US",
+      "model": "HC-PRO",
+      "country": "美国",
+      "warehouse": "美东仓",
+      "available": 920,
+      "days": 21,
+      "status": "正常",
+      "suggested": 0
+    },
+    {
+      "sku": "SM-A8-DE",
+      "model": "SM-A8",
+      "country": "德国",
+      "warehouse": "德国仓",
+      "available": 312,
+      "days": 13,
+      "status": "关注",
+      "suggested": 420
+    },
+    {
+      "sku": "KT-M2-UK",
+      "model": "KT-M2",
+      "country": "英国",
+      "warehouse": "英国仓",
+      "available": 678,
+      "days": 26,
+      "status": "正常",
+      "suggested": 0
+    },
+    {
+      "sku": "HS-S3-FR",
+      "model": "HS-S3",
+      "country": "法国",
+      "warehouse": "法国仓",
+      "available": 188,
+      "days": 8,
+      "status": "需补货",
+      "suggested": 360
+    },
+    {
+      "sku": "VC-L2-ES",
+      "model": "VC-L2",
+      "country": "西班牙",
+      "warehouse": "西班牙仓",
+      "available": 440,
+      "days": 18,
+      "status": "正常",
+      "suggested": 0
+    },
+    {
+      "sku": "HC-LITE-UK",
+      "model": "HC-LITE",
+      "country": "英国",
+      "warehouse": "英国仓",
+      "available": 264,
+      "days": 12,
+      "status": "关注",
+      "suggested": 300
+    }
   ]
 }
