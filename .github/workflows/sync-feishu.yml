@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: feishu-competitor-sync
@@ -32,9 +33,11 @@ jobs:
         run: python scripts/sync_feishu_competitors.py
 
       - name: Commit synchronized data
+        id: commit-data
         run: |
           if git diff --quiet -- data/dashboard.json; then
             echo "No dashboard changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -42,3 +45,10 @@ jobs:
           git add data/dashboard.json
           git commit -m "data: sync Feishu competitor records"
           git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy synchronized dashboard
+        if: steps.commit-data.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --ref main

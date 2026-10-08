@@ -110,6 +110,7 @@ const elements = {
   overallTrendCanvas: document.querySelector("#overall-trend-canvas"),
   salesDetailCount: document.querySelector("#sales-detail-count"),
   salesDetailTable: document.querySelector("#sales-detail-table"),
+  competitorSourceBadge: document.querySelector("#competitor-source-badge"),
   competitorCount: document.querySelector("#competitor-count"),
   competitorTable: document.querySelector("#competitor-table"),
   materialCount: document.querySelector("#material-count"),
@@ -461,7 +462,15 @@ function renderAll() {
   renderMaterials();
   renderDocuments();
   renderInventory();
-  elements.dataAsOf.textContent = `数据更新：${state.data.meta.updatedAt} · ${getExchangeRateNote()} · 当前为演示数据`;
+  renderDataAsOf();
+}
+
+function renderDataAsOf() {
+  const competitorSync = state.data.meta.competitorSync;
+  const sourceNote = competitorSync
+    ? "竞品数据已由飞书电子表格同步，其他模块为演示数据"
+    : "当前为演示数据";
+  elements.dataAsOf.textContent = `数据更新：${state.data.meta.updatedAt} · ${getExchangeRateNote()} · ${sourceNote}`;
 }
 
 function renderOverview() {
@@ -1132,23 +1141,29 @@ function renderSalesDetails() {
 }
 
 function renderCompetitors() {
-  const syncedAt = state.data.meta.competitorSync?.syncedAt;
+  const competitorSync = state.data.meta.competitorSync;
+  const syncedAt = competitorSync?.syncedAt;
   const syncNote = syncedAt
     ? ` · 飞书同步 ${syncTimeFormatter.format(new Date(syncedAt))}`
     : "";
+  const isSheetData = Boolean(competitorSync?.source === "Feishu Sheet");
+  const hasDerivedRanks = state.data.competitors.some((item) => item.rankDerived);
+  elements.competitorSourceBadge.textContent = isSheetData ? "飞书同步" : "演示数据";
   elements.competitorCount.textContent = `${state.data.competitors.length} 个竞品${syncNote}`;
   elements.competitorTable.innerHTML = buildResponsiveTable(
     [
-      { label: "品牌", value: (item) => `<strong>${escapeHtml(item.brand)}</strong>` },
-      { label: "品类", value: (item) => escapeHtml(item.category) },
-      { label: "型号", value: (item) => escapeHtml(item.model) },
-      { label: "国家", value: (item) => escapeHtml(item.country) },
+      { label: isSheetData ? "商品名称" : "品牌", value: (item) => `<strong>${escapeHtml(item.brand)}</strong>` },
+      { label: isSheetData ? "类目" : "品类", value: (item) => escapeHtml(item.category) },
+      { label: isSheetData ? "账号" : "型号", value: (item) => escapeHtml(item.model || "--") },
+      { label: isSheetData ? "国家地区" : "国家", value: (item) => escapeHtml(item.country) },
       { label: "平台", value: (item) => escapeHtml(item.platform) },
-      { label: "估算销量", value: (item) => integer.format(item.sales) },
-      { label: "排名", value: (item) => `第 ${integer.format(item.rank)} 名` },
+      { label: isSheetData ? "日均成交量" : "估算销量", value: (item) => integer.format(item.sales) },
+      { label: hasDerivedRanks ? "成交量排序" : "类目排名", value: (item) => `第 ${integer.format(item.rank)} 名` },
       {
-        label: "排名变化",
-        value: (item) =>
+        label: hasDerivedRanks ? "排序说明" : "排名变化",
+        value: (item) => item.change == null
+          ? "--"
+          :
           `<strong class="${item.change >= 0 ? "change-positive" : "change-negative"}">${item.change >= 0 ? "▲" : "▼"} ${Math.abs(
             item.change,
           )}</strong>`,
@@ -1349,7 +1364,7 @@ function updateFilterState(changedDateControl = "") {
   renderOverview();
   renderSalesDetails();
   renderMaterials();
-  elements.dataAsOf.textContent = `数据更新：${state.data.meta.updatedAt} · ${getExchangeRateNote()} · 当前为演示数据`;
+  renderDataAsOf();
 }
 
 function loadTargets(defaultTargets) {

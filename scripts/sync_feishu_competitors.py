@@ -20,7 +20,7 @@ API_BASE = "https://open.feishu.cn/open-apis"
 DEFAULT_FIELD_ALIASES = {
     "brand": ["品牌", "品牌名称", "竞品品牌", "商品名称", "商品标题", "brand"],
     "category": ["品类", "类目", "产品品类", "category"],
-    "model": ["型号", "产品型号", "商品型号", "model"],
+    "model": ["型号", "产品型号", "商品型号", "账号", "店铺账号", "model"],
     "country": ["国家", "市场", "国家/市场", "国家地区", "站点", "country", "market"],
     "platform": ["平台", "渠道", "销售平台", "platform", "channel"],
     "sales": ["估算销量", "销量", "月销量", "销售量", "日均成交量", "sales", "volume"],
@@ -275,6 +275,8 @@ def transform_records(
             continue
         observed_columns.update(str(key) for key in fields)
         values = {key: find_field(fields, field_aliases) for key, field_aliases in aliases.items()}
+        if not values["platform"] and find_field(fields, ["TikTok链接", "TikTok Link"]):
+            values["platform"] = "TikTok Shop"
         if not any(value not in (None, "") for value in values.values()):
             continue
         transformed.append(
@@ -317,6 +319,8 @@ def transform_records(
                 start=1,
             ):
                 item["rank"] = rank
+                item["rankDerived"] = True
+                item["change"] = None
 
     return transformed
 
