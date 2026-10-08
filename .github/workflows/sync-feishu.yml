@@ -1,0 +1,46 @@
+name: Sync Feishu competitor data
+
+on:
+  schedule:
+    # GitHub cron uses UTC. 18:15 UTC is 02:15 in Asia/Shanghai.
+    - cron: "15 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feishu-competitor-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Sync competitor records from Feishu
+        env:
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          FEISHU_APP_TOKEN: YxKrsOQUEhhW5ZtLsjxc39pVnxb
+          FEISHU_TABLE_ID: tblOKZGgX9nArXDH
+          FEISHU_VIEW_ID: vewE4buZj8
+          FEISHU_SOURCE_URL: "https://e00r0t9l67e.feishu.cn/wiki/VXHgw0UkuiMUlCkGr1Scpcy7n9e?table=tblOKZGgX9nArXDH&view=vewE4buZj8"
+          FEISHU_FIELD_MAP: ${{ vars.FEISHU_FIELD_MAP }}
+        run: python scripts/sync_feishu_competitors.py
+
+      - name: Commit synchronized data
+        run: |
+          if git diff --quiet -- data/dashboard.json; then
+            echo "No dashboard changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/dashboard.json
+          git commit -m "data: sync Feishu competitor records"
+          git push origin HEAD:main

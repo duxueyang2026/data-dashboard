@@ -43,6 +43,58 @@ py -m http.server 8080
 - `alerts`、`tips`：需要关注与经营提示
 - `salesDetails`、`competitors`、`materials`、`documents`、`inventory`：五个明细模块
 
+## 飞书竞品数据每日同步
+
+竞品数据来自以下飞书多维表格视图：
+
+<https://e00r0t9l67e.feishu.cn/wiki/VXHgw0UkuiMUlCkGr1Scpcy7n9e?table=tblOKZGgX9nArXDH&view=vewE4buZj8>
+
+`.github/workflows/sync-feishu.yml` 每天北京时间 02:15 读取该视图，将记录转换为
+`data/dashboard.json` 中的 `competitors` 数组，然后提交到 `main`。这次提交会继续触发
+GitHub Pages 部署。同步只替换竞品数据，不会改写销售、素材、库存等其他模块。
+
+### 飞书应用配置
+
+1. 在飞书开放平台创建企业自建应用。
+2. 为应用开通读取多维表格记录所需的只读权限，并发布应用版本。
+3. 在目标知识库或多维表格的权限设置中，将该应用添加为可访问成员。
+4. 在 GitHub 仓库打开 **Settings > Secrets and variables > Actions**。
+5. 新建 Repository secrets：`FEISHU_APP_ID` 和 `FEISHU_APP_SECRET`。
+6. 打开 **Actions > Sync Feishu competitor data > Run workflow**，手动验证第一次同步。
+
+应用密钥不得写入代码、网页或 JSON 数据。工作流每次运行时使用 Secret 换取短期
+`tenant_access_token`，不会把访问令牌提交到仓库。
+
+> 安全提示：当前 GitHub 仓库和 GitHub Pages 是公开的。同步后的竞品记录会写入公开的
+> `data/dashboard.json`，任何拿到网址的人都可以读取。请勿在飞书同步视图中放入采购底价、
+> 联系方式、账号、未公开合同数据或其他敏感信息。如需同步保密数据，应先改为私有数据接口
+> 和带身份验证的看板，而不是继续使用公开 GitHub Pages。
+
+### 飞书列名
+
+默认会识别以下列名；大小写、空格和常见符号不影响匹配：
+
+| 看板字段 | 默认支持的飞书列名 |
+| --- | --- |
+| 品牌 | 品牌、品牌名称、竞品品牌、brand |
+| 品类 | 品类、类目、产品品类、category |
+| 型号 | 型号、产品型号、商品型号、model |
+| 国家 | 国家、市场、国家/市场、站点、country、market |
+| 平台 | 平台、渠道、销售平台、platform、channel |
+| 估算销量 | 估算销量、销量、月销量、销售量、sales、volume |
+| 排名 | 排名、类目排名、榜单排名、rank |
+| 排名变化 | 排名变化、排名变动、较上期变化、变化、change |
+
+品牌、估算销量和排名是必需字段。列名不同可以在 GitHub Actions 的 Repository variable
+`FEISHU_FIELD_MAP` 中提供 JSON 映射，例如：
+
+```json
+{"brand":"竞品名称","sales":"30天销量","rank":"BSR排名","change":"排名升降"}
+```
+
+同步脚本在找不到必需字段时会让工作流失败，并输出飞书表中实际存在的列名，不会使用空数据
+覆盖当前竞品列表。
+
 网页上手动设置的目标保存在当前浏览器的 `localStorage` 中，不会改写仓库文件。后续如需
 多人共用目标，应将目标写入 JSON、数据库或后端接口。
 

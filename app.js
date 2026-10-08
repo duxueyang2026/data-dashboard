@@ -141,6 +141,14 @@ const dateFormatter = new Intl.DateTimeFormat("zh-CN", {
   day: "2-digit",
 });
 
+const syncTimeFormatter = new Intl.DateTimeFormat("zh-CN", {
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+});
+
 const state = {
   data: null,
   view: getInitialView(),
@@ -1124,7 +1132,11 @@ function renderSalesDetails() {
 }
 
 function renderCompetitors() {
-  elements.competitorCount.textContent = `${state.data.competitors.length} 个竞品`;
+  const syncedAt = state.data.meta.competitorSync?.syncedAt;
+  const syncNote = syncedAt
+    ? ` · 飞书同步 ${syncTimeFormatter.format(new Date(syncedAt))}`
+    : "";
+  elements.competitorCount.textContent = `${state.data.competitors.length} 个竞品${syncNote}`;
   elements.competitorTable.innerHTML = buildResponsiveTable(
     [
       { label: "品牌", value: (item) => `<strong>${escapeHtml(item.brand)}</strong>` },
