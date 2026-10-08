@@ -1,28 +1,28 @@
 :root {
   color-scheme: light;
-  --page: #f7f6f4;
-  --surface: #ffffff;
-  --surface-subtle: #fbfaf8;
-  --surface-strong: #f1efeb;
-  --ink: #252321;
-  --muted: #716d67;
-  --line: #e4e0da;
-  --line-strong: #d5cfc7;
-  --forest-950: #191919;
-  --forest-900: #262626;
-  --forest-800: #39261d;
-  --green: #f56600;
-  --green-strong: #cb4e00;
-  --green-soft: #fff0e5;
-  --lime: #ff7a1a;
-  --uwant-orange: #f56600;
+  --page: #f7f0e8;
+  --surface: #fffdf9;
+  --surface-subtle: #fdf8f3;
+  --surface-strong: #f4e7dc;
+  --ink: #30251f;
+  --muted: #8b796c;
+  --line: #ead9ca;
+  --line-strong: #dcc4b2;
+  --forest-950: #211a16;
+  --forest-900: #30231d;
+  --forest-800: #492a1d;
+  --green: #ef5a24;
+  --green-strong: #cf4516;
+  --green-soft: #fff0e8;
+  --lime: #ff7040;
+  --uwant-orange: #ef5a24;
   --blue: #1765a6;
   --blue-soft: #e8f1f9;
   --amber: #a45b08;
   --amber-soft: #fff0d8;
   --red: #c44747;
   --red-soft: #fdeaea;
-  --shadow: 0 1px 2px rgba(37, 35, 33, 0.07);
+  --shadow: 0 1px 2px rgba(70, 42, 27, 0.08);
   font-family:
     Inter, "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
 }
@@ -64,7 +64,7 @@ button:focus-visible,
 a:focus-visible,
 select:focus-visible,
 input:focus-visible {
-  outline: 3px solid rgba(245, 102, 0, 0.28);
+  outline: 3px solid rgba(239, 90, 36, 0.28);
   outline-offset: 2px;
 }
 
@@ -144,9 +144,13 @@ h3 {
 }
 
 .brand-mark {
-  width: 132px;
-  height: 31px;
-  display: block;
+  width: 150px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background: #ffffff;
 }
 
 .brand-mark img {
@@ -154,7 +158,7 @@ h3 {
   height: 100%;
   display: block;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
 }
 
 .brand-copy {
@@ -169,7 +173,7 @@ h3 {
 }
 
 .brand-copy span {
-  color: #b6b1ab;
+  color: #c6b6aa;
   font-size: 10px;
 }
 
@@ -189,7 +193,7 @@ h3 {
   border: 0;
   border-radius: 5px;
   background: transparent;
-  color: #c1cfc8;
+  color: #d6c8bf;
   cursor: pointer;
   text-align: left;
   font-size: 14px;
@@ -219,12 +223,12 @@ h3 {
   padding: 16px 2px 0;
   display: grid;
   gap: 5px;
-  border-top: 1px solid #44403c;
+  border-top: 1px solid #4b3b33;
   overflow-wrap: anywhere;
 }
 
 .source-panel .source-label {
-  color: #aaa49e;
+  color: #b9a79b;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -234,7 +238,7 @@ h3 {
 }
 
 .source-panel a {
-  color: #ffb37d;
+  color: #ffae83;
   font-size: 10px;
   line-height: 1.5;
 }
@@ -1426,9 +1430,9 @@ code {
   }
 
   .brand-mark {
-    width: 112px;
-    height: 26px;
-    flex-basis: 26px;
+    width: 124px;
+    height: 40px;
+    flex-basis: 40px;
   }
 
   .brand {
