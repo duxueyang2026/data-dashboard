@@ -18,16 +18,16 @@ from typing import Any
 
 API_BASE = "https://open.feishu.cn/open-apis"
 DEFAULT_FIELD_ALIASES = {
-    "brand": ["品牌", "品牌名称", "竞品品牌", "brand"],
+    "brand": ["品牌", "品牌名称", "竞品品牌", "商品名称", "商品标题", "brand"],
     "category": ["品类", "类目", "产品品类", "category"],
     "model": ["型号", "产品型号", "商品型号", "model"],
-    "country": ["国家", "市场", "国家/市场", "站点", "country", "market"],
+    "country": ["国家", "市场", "国家/市场", "国家地区", "站点", "country", "market"],
     "platform": ["平台", "渠道", "销售平台", "platform", "channel"],
-    "sales": ["估算销量", "销量", "月销量", "销售量", "sales", "volume"],
+    "sales": ["估算销量", "销量", "月销量", "销售量", "日均成交量", "sales", "volume"],
     "rank": ["排名", "类目排名", "榜单排名", "rank"],
     "change": ["排名变化", "排名变动", "较上期变化", "变化", "change"],
 }
-REQUIRED_FIELDS = ("brand", "sales", "rank")
+REQUIRED_FIELDS = ("brand", "sales")
 CHINA_STANDARD_TIME = timezone(timedelta(hours=8), name="Asia/Shanghai")
 
 
@@ -308,6 +308,15 @@ def transform_records(
                 + ". Available Feishu columns: "
                 + ", ".join(sorted(observed_columns))
             )
+
+        # The supplied Sheet tracks product performance but does not contain a
+        # platform rank. Derive a comparable rank from daily sales when needed.
+        if not any(item["rank"] > 0 for item in transformed):
+            for rank, item in enumerate(
+                sorted(transformed, key=lambda record: record["sales"], reverse=True),
+                start=1,
+            ):
+                item["rank"] = rank
 
     return transformed
 

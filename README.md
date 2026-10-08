@@ -86,7 +86,8 @@ GitHub Pages 部署。同步只替换竞品数据，不会改写销售、素材�
 | 排名 | 排名、类目排名、榜单排名、rank |
 | 排名变化 | 排名变化、排名变动、较上期变化、变化、change |
 
-品牌、估算销量和排名是必需字段。列名不同可以在 GitHub Actions 的 Repository variable
+当前电子表格中的 `商品名称`、`国家地区`、`类目` 和 `日均成交量` 也会被自动识别；若未提供
+排名列，看板会按日均成交量从高到低自动生成排名。品牌或商品名称、估算销量是必需字段。列名不同可以在 GitHub Actions 的 Repository variable
 `FEISHU_FIELD_MAP` 中提供 JSON 映射，例如：
 
 ```json
