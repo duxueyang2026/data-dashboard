@@ -164,7 +164,7 @@ def rows_to_records(rows: list[list[Any]]) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     for row in rows[1:]:
         fields = {
-            header: value
+            header: row[index]
             for index, header in enumerate(headers)
             if header and index < len(row) and row[index] not in (None, "")
         }
