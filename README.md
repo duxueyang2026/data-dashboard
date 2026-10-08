@@ -45,19 +45,20 @@ py -m http.server 8080
 
 ## 飞书竞品数据每日同步
 
-竞品数据来自以下飞书多维表格视图：
+竞品数据来自以下飞书知识库中的电子表格：
 
 <https://e00r0t9l67e.feishu.cn/wiki/VXHgw0UkuiMUlCkGr1Scpcy7n9e?table=tblOKZGgX9nArXDH&view=vewE4buZj8>
 
-`.github/workflows/sync-feishu.yml` 每天北京时间 02:15 读取该视图，将记录转换为
+`.github/workflows/sync-feishu.yml` 每天北京时间 02:15 先解析该知识库链接，再读取电子表格的
+第一个工作表。第一行必须是列名，后续每一行是一条竞品记录；同步将记录转换为
 `data/dashboard.json` 中的 `competitors` 数组，然后提交到 `main`。这次提交会继续触发
 GitHub Pages 部署。同步只替换竞品数据，不会改写销售、素材、库存等其他模块。
 
 ### 飞书应用配置
 
 1. 在飞书开放平台创建企业自建应用。
-2. 为应用开通读取多维表格记录所需的只读权限，并发布应用版本。
-3. 在目标知识库或多维表格的权限设置中，将该应用添加为可访问成员。
+2. 为应用开通读取知识库和电子表格所需的只读权限，并发布应用版本。
+3. 在目标知识库或电子表格的权限设置中，将该应用添加为可访问成员。
 4. 在 GitHub 仓库打开 **Settings > Secrets and variables > Actions**。
 5. 新建 Repository secrets：`FEISHU_APP_ID` 和 `FEISHU_APP_SECRET`。
 6. 打开 **Actions > Sync Feishu competitor data > Run workflow**，手动验证第一次同步。

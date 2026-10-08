@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync competitor records from a Feishu Bitable view into dashboard.json."""
+"""Sync competitor rows from a Feishu Sheet in Wiki into dashboard.json."""
 
 from __future__ import annotations
 
@@ -82,42 +82,94 @@ def get_tenant_access_token(app_id: str, app_secret: str) -> str:
     return str(token)
 
 
-def list_records(
+def get_wiki_sheet(token: str, wiki_token: str) -> tuple[str, str]:
+    """Resolve a Wiki node to its actual Feishu Sheet token."""
+    query = urllib.parse.urlencode({"token": wiki_token, "obj_type": "wiki"})
+    result = request_json(
+        "GET",
+        f"{API_BASE}/wiki/v2/spaces/get_node?{query}",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    node = (result.get("data") or {}).get("node") or {}
+    if not isinstance(node, dict):
+        raise SyncError("Feishu Wiki response does not contain a node object.")
+    object_type = str(node.get("obj_type") or "").strip().casefold()
+    spreadsheet_token = str(node.get("obj_token") or "").strip()
+    if object_type != "sheet":
+        raise SyncError(
+            "The Wiki link does not point to a Feishu Sheet "
+            f"(received obj_type={object_type or 'unknown'})."
+        )
+    if not spreadsheet_token:
+        raise SyncError("Feishu Wiki node did not return a spreadsheet token.")
+    return spreadsheet_token, str(node.get("title") or "")
+
+
+def list_sheet_ids(token: str, spreadsheet_token: str) -> list[str]:
+    encoded_token = urllib.parse.quote(spreadsheet_token, safe="")
+    result = request_json(
+        "GET",
+        f"{API_BASE}/sheets/v2/spreadsheets/{encoded_token}/metainfo",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    data = result.get("data") or {}
+    sheets = data.get("sheets") or []
+    if not isinstance(sheets, list):
+        raise SyncError("Feishu Sheet metadata does not contain a sheets array.")
+    sheet_ids = [
+        str(sheet.get("sheet_id") or sheet.get("sheetId") or "").strip()
+        for sheet in sheets
+        if isinstance(sheet, dict)
+    ]
+    sheet_ids = [sheet_id for sheet_id in sheet_ids if sheet_id]
+    if not sheet_ids:
+        raise SyncError("The Feishu spreadsheet has no readable worksheets.")
+    return sheet_ids
+
+
+def list_sheet_rows(
     token: str,
-    app_token: str,
-    table_id: str,
-    view_id: str,
-) -> list[dict[str, Any]]:
+    spreadsheet_token: str,
+    sheet_id: str,
+) -> list[list[Any]]:
+    # The first worksheet is treated as a normal table: row 1 supplies field names.
+    # A wide enough range keeps the integration dependency-free while allowing 1,000 rows.
+    cell_range = f"{sheet_id}!A1:Z1000"
+    query = urllib.parse.urlencode(
+        {"ranges": cell_range, "valueRenderOption": "ToString"}
+    )
+    encoded_token = urllib.parse.quote(spreadsheet_token, safe="")
+    result = request_json(
+        "GET",
+        f"{API_BASE}/sheets/v2/spreadsheets/{encoded_token}/values_batch_get?{query}",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+    data = result.get("data") or {}
+    value_ranges = data.get("valueRanges") or data.get("value_ranges") or []
+    if not isinstance(value_ranges, list) or not value_ranges:
+        raise SyncError("Feishu Sheet response does not contain values for the selected worksheet.")
+    values = (value_ranges[0] or {}).get("values") if isinstance(value_ranges[0], dict) else None
+    if not isinstance(values, list):
+        raise SyncError("Feishu Sheet values response is not a row array.")
+    return [row if isinstance(row, list) else [] for row in values]
+
+
+def rows_to_records(rows: list[list[Any]]) -> list[dict[str, Any]]:
+    if not rows:
+        return []
+    headers = [str(scalar_value(value) or "").strip() for value in rows[0]]
+    if not any(headers):
+        raise SyncError("The first row of the Feishu Sheet must contain column names.")
+
     records: list[dict[str, Any]] = []
-    page_token = ""
-
-    while True:
-        query = {"page_size": "500", "view_id": view_id}
-        if page_token:
-            query["page_token"] = page_token
-        encoded_app = urllib.parse.quote(app_token, safe="")
-        encoded_table = urllib.parse.quote(table_id, safe="")
-        url = (
-            f"{API_BASE}/bitable/v1/apps/{encoded_app}/tables/{encoded_table}/records"
-            f"?{urllib.parse.urlencode(query)}"
-        )
-        result = request_json(
-            "GET",
-            url,
-            headers={"Authorization": f"Bearer {token}"},
-        )
-        data = result.get("data") or {}
-        page_items = data.get("items") or []
-        if not isinstance(page_items, list):
-            raise SyncError("Feishu records response does not contain an items array.")
-        records.extend(item for item in page_items if isinstance(item, dict))
-
-        if not data.get("has_more"):
-            break
-        page_token = str(data.get("page_token") or "")
-        if not page_token:
-            raise SyncError("Feishu reported more records without returning page_token.")
-
+    for row in rows[1:]:
+        fields = {
+            header: value
+            for index, header in enumerate(headers)
+            if header and index < len(row) and row[index] not in (None, "")
+        }
+        if fields:
+            records.append({"fields": fields})
     return records
 
 
@@ -265,9 +317,10 @@ def update_dashboard(
     competitors: list[dict[str, Any]],
     *,
     source_url: str,
-    app_token: str,
-    table_id: str,
-    view_id: str,
+    wiki_token: str,
+    spreadsheet_token: str,
+    sheet_id: str,
+    spreadsheet_title: str,
 ) -> None:
     try:
         dashboard = json.loads(dashboard_path.read_text(encoding="utf-8"))
@@ -280,13 +333,14 @@ def update_dashboard(
     now = datetime.now(CHINA_STANDARD_TIME).replace(microsecond=0)
     dashboard["competitors"] = competitors
     dashboard["meta"]["updatedAt"] = now.strftime("%Y-%m-%d %H:%M")
-    dashboard["meta"]["source"] = "GitHub Repository + Feishu Bitable"
+    dashboard["meta"]["source"] = "GitHub Repository + Feishu Sheet"
     dashboard["meta"]["competitorSync"] = {
-        "source": "Feishu Bitable",
+        "source": "Feishu Sheet",
         "sourceUrl": source_url,
-        "appToken": app_token,
-        "tableId": table_id,
-        "viewId": view_id,
+        "wikiToken": wiki_token,
+        "spreadsheetToken": spreadsheet_token,
+        "sheetId": sheet_id,
+        "spreadsheetTitle": spreadsheet_title,
         "syncedAt": now.isoformat(),
         "recordCount": len(competitors),
     }
@@ -316,29 +370,43 @@ def required_env(name: str) -> str:
 def main() -> int:
     args = parse_args()
     dashboard_path = Path(args.dashboard)
-    app_token = required_env("FEISHU_APP_TOKEN")
-    table_id = required_env("FEISHU_TABLE_ID")
-    view_id = required_env("FEISHU_VIEW_ID")
+    wiki_token = required_env("FEISHU_WIKI_TOKEN")
     source_url = required_env("FEISHU_SOURCE_URL")
     aliases = load_field_aliases()
+    spreadsheet_token = "fixture-spreadsheet"
+    sheet_id = "fixture-sheet"
+    spreadsheet_title = "Fixture"
 
     if args.fixture:
         fixture = json.loads(Path(args.fixture).read_text(encoding="utf-8"))
-        records = (fixture.get("data") or {}).get("items") or fixture.get("items") or []
+        rows = fixture.get("rows") if isinstance(fixture, dict) else None
+        if isinstance(rows, list):
+            records = rows_to_records(rows)
+            spreadsheet_token = str(fixture.get("spreadsheetToken") or spreadsheet_token)
+            sheet_id = str(fixture.get("sheetId") or sheet_id)
+            spreadsheet_title = str(fixture.get("title") or spreadsheet_title)
+        else:
+            # Backward-compatible test input for the former Bitable integration.
+            records = (fixture.get("data") or {}).get("items") or fixture.get("items") or []
     else:
         app_id = required_env("FEISHU_APP_ID")
         app_secret = required_env("FEISHU_APP_SECRET")
         access_token = get_tenant_access_token(app_id, app_secret)
-        records = list_records(access_token, app_token, table_id, view_id)
+        spreadsheet_token, spreadsheet_title = get_wiki_sheet(access_token, wiki_token)
+        sheet_id = list_sheet_ids(access_token, spreadsheet_token)[0]
+        records = rows_to_records(
+            list_sheet_rows(access_token, spreadsheet_token, sheet_id)
+        )
 
     competitors = transform_records(records, aliases)
     update_dashboard(
         dashboard_path,
         competitors,
         source_url=source_url,
-        app_token=app_token,
-        table_id=table_id,
-        view_id=view_id,
+        wiki_token=wiki_token,
+        spreadsheet_token=spreadsheet_token,
+        sheet_id=sheet_id,
+        spreadsheet_title=spreadsheet_title,
     )
     print(f"Synced {len(competitors)} competitor records into {dashboard_path}.")
     return 0

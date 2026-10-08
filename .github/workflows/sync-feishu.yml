@@ -26,9 +26,7 @@ jobs:
         env:
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
-          FEISHU_APP_TOKEN: YxKrsOQUEhhW5ZtLsjxc39pVnxb
-          FEISHU_TABLE_ID: tblOKZGgX9nArXDH
-          FEISHU_VIEW_ID: vewE4buZj8
+          FEISHU_WIKI_TOKEN: VXHgw0UkuiMUlCkGr1Scpcy7n9e
           FEISHU_SOURCE_URL: "https://e00r0t9l67e.feishu.cn/wiki/VXHgw0UkuiMUlCkGr1Scpcy7n9e?table=tblOKZGgX9nArXDH&view=vewE4buZj8"
           FEISHU_FIELD_MAP: ${{ vars.FEISHU_FIELD_MAP }}
         run: python scripts/sync_feishu_competitors.py
