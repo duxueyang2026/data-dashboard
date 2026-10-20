@@ -14,6 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./overview-refresh.css" />
   </head>
   <body>
     <div class="app-shell">
@@ -79,7 +80,7 @@
         <header class="topbar">
           <div class="title-block">
             <p class="eyebrow" id="view-eyebrow">BUSINESS OVERVIEW</p>
-            <h1 id="view-title">销售数据总览</h1>
+            <h1 id="view-title">经营总览</h1>
             <p class="subtitle" id="view-subtitle">国家与平台经营表现、目标达成与管理建议</p>
           </div>
           <div class="header-actions">
@@ -150,6 +151,24 @@
             <p class="filter-summary" id="filter-summary">正在计算统计范围</p>
           </form>
 
+          <p class="overview-disclosure">当前为演示口径：国家及平台的时间区间指标按整体销售比例估算，环比为示例值，暂不用于实际经营决策。</p>
+
+          <section class="sales-summary-section" aria-labelledby="sales-summary-title">
+            <div class="sales-summary-heading">
+              <div class="section-title-row">
+                <span class="section-icon blue" aria-hidden="true">
+                  <i class="fa-solid fa-chart-column"></i>
+                </span>
+                <div>
+                  <h2 id="sales-summary-title">整体销售数据</h2>
+                  <p>当前筛选范围内的销售规模、投入与效率</p>
+                </div>
+              </div>
+              <span class="panel-period" id="metric-period">本月</span>
+            </div>
+            <div class="metric-grid" id="metric-grid" aria-label="整体销售数据指标"></div>
+          </section>
+
           <section class="goal-panel" aria-labelledby="goal-title">
             <div class="goal-heading">
               <div class="section-title-row">
@@ -170,22 +189,6 @@
               </button>
             </div>
             <div class="goal-grid" id="goal-grid"></div>
-          </section>
-
-          <section class="sales-summary-section" aria-labelledby="sales-summary-title">
-            <div class="sales-summary-heading">
-              <div class="section-title-row">
-                <span class="section-icon blue" aria-hidden="true">
-                  <i class="fa-solid fa-chart-column"></i>
-                </span>
-                <div>
-                  <h2 id="sales-summary-title">整体销售数据</h2>
-                  <p>当前筛选范围内的销售规模、投入与效率</p>
-                </div>
-              </div>
-              <span class="panel-period" id="metric-period">本月</span>
-            </div>
-            <div class="metric-grid" id="metric-grid" aria-label="整体销售数据指标"></div>
           </section>
 
           <div class="overview-layout">
