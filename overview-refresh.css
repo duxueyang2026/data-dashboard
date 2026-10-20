@@ -1,0 +1,56 @@
+/* 经营总览视觉优化：保留现有数据和交互逻辑。 */
+:root {
+  --page:#f3f6f3; --surface:#fff; --surface-subtle:#f7faf7;
+  --surface-strong:#e6f1e8; --ink:#17271e; --muted:#627268;
+  --line:#dfe9e1; --line-strong:#c6d8ca; --forest-950:#153f2d;
+  --forest-900:#1b5038; --forest-800:#286247; --green:#208050;
+  --green-strong:#176b41; --green-soft:#e6f5e9; --lime:#63ba78;
+  --shadow:0 5px 18px rgba(21,63,45,.055);
+}
+.sidebar { padding:24px 16px; }
+.brand-mark { border-radius:7px; }
+.nav-item { border-radius:9px; min-height:46px; }
+.nav-item.active { box-shadow:inset 3px 0 0 #9cddb0; }
+.source-panel a { color:#b8e6c2; }
+.main-content { max-width:1600px; padding:27px clamp(18px,3vw,42px) 30px; }
+.topbar { min-height:80px; }
+.eyebrow { letter-spacing:.09em; }
+h1 { font-size:28px; letter-spacing:-.025em; }
+.subtitle { font-size:13px; }
+.data-state { padding:8px 11px; border:1px solid var(--line); border-radius:9px; background:var(--surface); }
+.filter-bar { margin:0 0 14px; padding:11px; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:var(--shadow); flex-wrap:wrap; }
+.filter-control,.custom-date-range,.icon-button,.secondary-button,.compact-select { border-radius:8px; }
+.filter-summary { white-space:normal; overflow:visible; }
+.overview-disclosure { margin:0 0 16px; padding:11px 14px; border-left:4px solid #bb7a23; border-radius:8px; background:#fff7e9; color:#68491d; font-size:12px; line-height:1.6; }
+.sales-summary-section { margin-top:0; }
+.metric-grid { gap:12px; }
+.goal-panel,.panel,.metric-card,.decision-panel,.upload-panel { border-radius:12px; }
+.metric-card { min-height:118px; padding:16px; }
+.metric-value { font-size:25px; }
+.metric-heading,.metric-change,.goal-label,.goal-meta,.panel-header p,.decision-heading p { font-size:11px; }
+.goal-panel { margin-top:16px; padding:17px; border-color:var(--line); }
+.overview-layout,.overview-main-column,.decision-column { gap:12px; }
+.overview-layout { margin-top:16px; }
+.panel { padding:18px; }
+.decision-heading { padding:16px 16px 12px; }
+.decision-list { padding:0 16px; }
+.decision-title { font-size:12px; }
+.decision-meta,.decision-action { font-size:11px; }
+.decision-action { color:#385d48; }
+.data-table { font-size:11px; }
+.data-table th,.data-table td { padding:10px; }
+@media (max-width:760px) {
+  .main-content { padding:18px 14px 24px; }
+  .filter-bar { margin-top:16px; }
+  .filter-summary { grid-column:1 / -1; justify-self:start; text-align:left; }
+  .metric-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .decision-column { grid-row:1; }
+  .overview-main-column { grid-row:2; }
+}
+@media (max-width:560px) {
+  .metric-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .metric-card { min-height:105px; padding:13px; }
+  .metric-value { font-size:clamp(18px,5vw,24px); }
+  .goal-panel,.panel,.metric-card,.decision-panel { border-radius:10px; }
+}
+@media (max-width:360px) { .metric-grid { grid-template-columns:1fr; } }
