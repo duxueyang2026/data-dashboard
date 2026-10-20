@@ -15,7 +15,7 @@ const VALID_VIEWS = new Set([
 const VIEW_CONFIG = {
   overview: {
     eyebrow: "BUSINESS OVERVIEW",
-    title: "销售数据总览",
+    title: "经营总览",
     subtitle: "国家与平台经营表现、目标达成与管理建议",
   },
   sales: {
